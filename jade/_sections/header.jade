@@ -1,6 +1,6 @@
 header.header
 	.header__wrapper
-		- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}];
+		- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}];
 		
 		.header__menu.menu-header
 			button.toggle-mnu
@@ -9,6 +9,14 @@ header.header
 				ul.header-menu
 					each item in menu
 						li.header-menu__item
-							a(href="#").header-menu__link
+							a(href="#").header-menu__link.header__item
 								+icon(item.icon)
 								span.header-menu__span= item.title
+
+		.header__actions
+			.header__wallet.header__item
+				+icon('wallet')
+				span 24452
+			a(href="#").header__user.header__item
+				+icon('exit')
+				span Выйти

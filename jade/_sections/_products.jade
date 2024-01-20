@@ -1,0 +1,12 @@
+section.products
+	- let prods = ['3800', '3400', '4340'];
+	.products__wrapper
+		- for (var i=0; i < 2; i++)
+			each price, i in prods
+				.product-card
+					.product-card__img._fit
+						img._fit-img(src="img/snikers/" + (i+1)+".jpg" alt="product")
+					.product-card__body
+						.product-card__title Snickers Off-White 2024
+						.product-card__price= price
+						button(type="button").product-card__btn +

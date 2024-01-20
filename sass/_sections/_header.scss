@@ -1,5 +1,147 @@
 /*--------------------header----------------------*/
-.header{
+.header {
+	background-color: #fff;
+	z-index: 5;
+}
+.header__wrapper {
+	display: flex;
+	column-gap: rem(30);
+	min-height: rem(54);
+	@include min-screen($sm){
+		justify-content: space-between;
+		
+	}
+}
+.header__menu {
+	position: relative;
+	&:before{
+		content: '';
+		display: block;
+		height: rem(54);
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2;
 
+		@include min-screen($sm){
+			display: none;
+		}
+	}
+}
+.menu-header {}
+.toggle-mnu {
+	@include min-screen($sm){
+		display: none;
+		
+	}
+}
+.menu-header__body {
+
+	@include menu-mob($sm);
+	@include max-screen($sm){
+		background-color: #fff;
+	}
+
+
+}
+.header-menu {
+	display: flex;
+	flex-wrap: wrap;
+
+	@include min-screen($sm){
+		align-items: center;
+		
+	}
+	@include max-screen($sm){
+		flex-direction: column;
+		padding-top: rem(54);
+	}
+}
+.header-menu__item {
+	list-style-type: none;
+}
+.header-menu__link {
+	border-bottom: 3px solid transparent;
+	transition: all .4s;
+	.icon {
+		font-size: rem(15);
+		color: $icons;
+	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+		&:hover{
+			border-bottom-color: $orange;
+		}
+	}
+	&.header__item{
+
+		@include max-screen($sm){
+			justify-content: center;
+			font-size: rem(24);
+		}
+	}
+	.icon{
+		@include max-screen($sm){
+			
+			display: none;
+		}
+	}
+}
+.header-menu__span {}
+.header__actions {
+	display: flex;
+	align-items: center;
+	column-gap: rem(33);
+	position: relative;
+	z-index: 3;
+
+	@include min-screen($lg){
+		margin-right: rem(-100);
+	}
+}
+.header__wallet{
+	&.header__item{
+		padding-left: 0;
+		padding-right: 0;
+
+		@media (any-hover: hover) { //только для устройств с ховером
+			cursor:default;
+
+		}
+	}
+
+
+}
+.header__user {
+	border-bottom: 3px solid transparent;
+	transition: all .4s;
+}
+.header__item{
+	@include adaptive-value-rem('padding-right', 33, 0, $maxWidth, $minWidth, 1);
+	@include adaptive-value-rem('padding-left', 33, 0, $maxWidth, $minWidth, 1);
+	padding-top: rem(18);
+	padding-bottom: rem(18);
+	display: flex;
+	align-items: center;
+	column-gap: rem(10);
+	color: #000;
+	font-family: Inter;
+	font-size: rem(12);
+	font-style: normal;
+	font-weight: 400;
+	text-decoration: none;
+	.icon {
+		font-size: rem(15);
+		color: $icons;
+	}
+	@media (any-hover: hover) { //только для устройств с ховером
+		cursor: pointer;
+		&:hover{
+			border-bottom-color: $orange;
+		}
+	}
 }
 /*--------------------END header----------------------*/ 

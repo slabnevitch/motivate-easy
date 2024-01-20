@@ -59,34 +59,35 @@ body{
 
 // Прижать футер к низу
 
-// html, body{
-// 	height: 100%;
-// }
-// .main{
-// 	display: flex;
-// 	flex-direction: column;
-// 	min-height: 100%;
-// 	overflow: hidden;
+html, body{
+	height: 100%;
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	overflow: hidden;
 
-// 	@supports(overflow: clip){
-// 		overflow: clip;
-// 	}
+	@supports(overflow: clip){
+		overflow: clip;
+	}
 
-// 	& > *{
-// 		min-width: 0;
-// 	}
+	& > *{
+		min-width: 0;
+	}
 
-// 	.header{
-// 		flex: 0 0 auto;
-// 	}
-// 	.main-content{
-// 		flex: 1 1 auto;
-// 	}
-// 	.footer{
-// 		flex: 0 0 auto;
-// 		// margin-top: auto;
-// 	}
-// }
+	.header{
+		flex: 0 0 auto;
+	}
+	.main-content{
+		padding-top: rem(43);
+		flex: 1 1 auto;
+	}
+	.footer{
+		flex: 0 0 auto;
+		// margin-top: auto;
+	}
+}
 
 // END Прижать футер к низу
 
@@ -201,7 +202,7 @@ padding-bottom: 52.25%;
 	}
 }
 ._fit{
-	padding-bottom: 80%;
+	aspect-ratio: 1/1;
 	position: relative;
 }
 ._fit ._fit-img{//_fit - class for object-fit
@@ -256,63 +257,64 @@ padding-bottom: 52.25%;
 // @import "_misc/_counter";
 // @import "_misc/multilevel-dropdown.scss";
 
-// .toggle-mnu{
-// 	position: fixed;
-// 	right: rem(30);
-// 	top: rem(15);
-//   display: block;
-//   width: rem(28);
-//   height: rem(28);
-//   margin-top: rem(14);
-//   padding: 0;
-//   background-color: transparent;
-//   border: none;
+.toggle-mnu{
+	position: fixed;
+	right: rem(30);
+	top: rem(5);
+  display: block;
+  width: rem(28);
+  height: rem(28);
+  // margin-top: rem(14);
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  z-index: 2;
 
-//   span:after, span:before{
+  span:after, span:before{
 
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     top: rem(9);
-//   } 
+    content: "";
+    position: absolute;
+    left: 0;
+    top: rem(9);
+  } 
 
-//   span:after{
+  span:after{
 
-//     top: rem(18);
-//   }
+    top: rem(18);
+  }
 
-//   span{
+  span{
 
-//     position: relative;
-//     display: block;
-//   } 
+    position: relative;
+    display: block;
+  } 
 
-//   span, span:after, span:before{
+  span, span:after, span:before{
 
-//     width: 100%;
-//     height: rem(2);
-//     background-color: #000;
-//     transition: all 0.3s;
-//     backface-visibility: hidden;
-//     border-radius: rem(2);
-//   }
+    width: 100%;
+    height: rem(2);
+    background-color: #000;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: rem(2);
+  }
 
 
-//   &.on span{
+  &.on span{
 
-//     background-color: transparent;
-//   } 
+    background-color: transparent;
+  } 
 
-//   &.on span:before{
+  &.on span:before{
 
-//     transform: rotate(45deg) translate(rem(-1), 0);
-//   } 
+    transform: rotate(45deg) translate(rem(-1), 0);
+  } 
 
-//   &.on span:after{
+  &.on span:after{
 
-//     transform: rotate(-45deg) translate(rem(6), rem(-7));
-//   } 
-// } 
+    transform: rotate(-45deg) translate(rem(6), rem(-7));
+  } 
+} 
 // исправление бага отсутствия прозрачности при fade--переходах с/у слайдами
 // .swiper-container-fade{
 // 	.swiper-slide{

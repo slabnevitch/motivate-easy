@@ -1,0 +1,14 @@
+header.header
+	.header__wrapper
+		- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}];
+		
+		.header__menu.menu-header
+			button.toggle-mnu
+				span
+			nav.menu-header__body
+				ul.header-menu
+					each item in menu
+						li.header-menu__item
+							a(href="#").header-menu__link
+								+icon(item.icon)
+								span.header-menu__span= item.title

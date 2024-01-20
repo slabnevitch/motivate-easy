@@ -2,11 +2,36 @@ extends _misc/main
 
 block title
 	| Товары
-	- var page = 'products';
+	- var page = 'admin';
 
 block content
-	include _sections/_products
-	
+	.admin-search
+		.admin-search__wrapper
+			form.admin-search__form(action="#")
+				+icon('search')
+				label.admin-search__label
+					input(autocomplete="off" id="search-input" type="text" name="search" class="admin-search__input" placeholder="Введите имя участника")
+
+				button.btn.btn-md.admin-search__submit(type="submit") Поиск
+
+				.search-results
+					- for (var i=0; i < 3; i++)
+						.search-results__item Что-то найдено
+			
+			.admin-search__table
+				.table
+					.table__header.header-table
+						- let headerCols = ['Имя', 'Баланс', 'Количество активностей', 'Последняя активность'];
+						.header-table__row
+							each col in headerCols
+								.table__column= col
+					
+					.table__body.body-table
+						- let bodyCols = ['Иванов Иван Иванович', '1234', '11', '19/09/2022'];
+						- for (var i=0; i < 8; i++)
+							.body-table__row
+								each col in bodyCols
+									.body-table__column= col
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

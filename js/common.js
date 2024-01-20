@@ -88,5 +88,19 @@
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
 		
+		//serch-results toggle 
+		if(document.querySelector('.admin-search__form') !== null){
+			var serchInput = document.getElementById('search-input');
+			
+			serchInput.onfocus = function(e) {
+				console.log('focus')
+				this.closest('.admin-search__form').classList.add('search-visible');
+			}
+			serchInput.onblur = function(e) {
+				console.log('blur')
+				this.closest('.admin-search__form').classList.remove('search-visible');
+			}
+		}
+		//END serch-results toggle 
 	});
 })();

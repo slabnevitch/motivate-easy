@@ -1,3 +1,45 @@
 /*--------------------ui----------------------*/
+.btn{
+	@include but-null();
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: rem(46);
+  border: none;
+  color: #fff;
+  text-decoration: none;
+  background-color: $blue;
+  padding: rem(5) rem(30);
+  font-family: Rubik;
+	font-size: rem(14);
+	font-weight: 500;
+	text-transform: uppercase;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+  outline: none;
+  transition: background-color .1s ease;
+	
+ 
+  
+  &-md{
+   height: rem(37);
+  }
+   &-fw{
+   width: 100%;
+  }
 
+  @media (any-hover: hover) { //только для устройств с ховером
+  		cursor: pointer;
+  		 &:hover{
+		     background-color: lighten($blue, 5%);
+		  }
+		   
+				
+		  &:active{
+		   background-color: darken($blue, 5%);
+		  }
+  	}
+   
+}
 /*--------------------END ui----------------------*/ 

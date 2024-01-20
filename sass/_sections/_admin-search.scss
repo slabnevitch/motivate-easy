@@ -1,0 +1,118 @@
+/*--------------------admin-search----------------------*/
+.admin-search {}
+.admin-search__wrapper {}
+.admin-search__form {
+	margin-bottom: rem(35);
+	padding: 0 rem(16) 0 rem(81);
+	position: relative;
+	display: flex;
+	align-items: center;
+	background: #FFF;
+	box-shadow: 0px 4px 14px 0px #E5E5E5;
+	border-radius: 7px;
+
+	@include max-screen($sm){
+		flex-wrap: wrap;	
+	}
+	.icon{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $icons;
+		left: rem(16.76);
+		font-size: rem(20.48);
+	}
+
+}
+.admin-search__label {
+	display: block;
+	flex: 1 1 auto;
+}
+.admin-search__input {
+	height: rem(57);
+	@include placecolor(#C4C4C4);
+	color: #C4C4C4;
+	font-family: Roboto;
+	font-size: rem(20);
+	font-weight: 700;
+}
+.admin-search__submit {
+	flex: 0 0 rem(142);
+
+	@include max-screen($sm){
+		flex: 0 0 100%;
+	}
+}
+.search-results{
+	padding: rem(37) rem(42);
+	position: absolute;
+	left: 0;
+	top: calc(100% + rem(47));
+	width: 100%;
+	max-height: rem(339);
+	border-radius: rem(10);
+	background: #FFF;
+	box-shadow: 0px 4px 35px 0px #79D1D5;
+	overflow-y: auto;
+	transition: transform .3s;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(rem(-10));
+	z-index: 2;
+
+	.search-visible &{
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.search-results__item{
+	height: rem(61);
+	background-color: #BCFCFF;
+	display: flex;
+	align-items: center;
+	padding: rem(5) rem(30);
+	
+	&:not(:last-child){
+		margin-bottom: rem(10);
+	}
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+			&:hover{
+	
+			}
+		}
+}
+.admin-search__table {
+	.header-table__row {
+		&:first-child{
+			// flex: 
+		}
+
+		// &:nth-child(){
+			
+		// }
+
+	}
+}
+.table {}
+.table__header {
+}
+.header-table {
+
+}
+.header-table__row {
+	display: flex;
+	column-gap: rem(30)
+}
+.table__column {}
+.table__body {
+}
+.body-table {}
+.body-table__row {
+	display: flex;
+		column-gap: rem(30)
+}
+.body-table__column {}
+/*--------------------END admin-search----------------------*/ 

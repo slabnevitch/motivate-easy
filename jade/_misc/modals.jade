@@ -11,9 +11,9 @@
 					input(id="withdrawal-field" autocomplete="off" type="text" name="" class="form__input" placeholder="Количество кронов")
 
 				.modal__bottom
-					button(type="button" data-micromodal-close).btn.modal__action сНЯТЬ
+					button(type="button").btn.modal__action сНЯТЬ
 					.modal__message.modal__message--error Ошибка снятия кронов, баланс уходит в минус
-					button(type="button" data-micromodal-close).btn.btn-gray.modal__action Отмена
+					button(type="button").btn.btn-gray.modal__action Отмена
 
 #modal-refill.modal.micromodal-slide(aria-hidden='true')
 	.modal__overlay(tabindex='-1' data-micromodal-close)
@@ -37,6 +37,49 @@
 						textarea(id="description" autocomplete="off"  name="" class="form__area" placeholder="Описание товара")
 
 				.modal__bottom
-					button(type="button" data-micromodal-close).btn.modal__action ПОПОЛНИТЬ
+					button(type="button").btn.modal__action ПОПОЛНИТЬ
 					.modal__message.modal__message--success Баланс кронов успешно пополнен
-					button(type="button" data-micromodal-close).btn.btn-gray.modal__action Отмена
+					button(type="button").btn.btn-gray.modal__action Отмена
+
+#product-create.modal.micromodal-slide(aria-hidden='true')
+	.modal__overlay(tabindex='-1' data-micromodal-close)
+		.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+			.modal__header
+				button.modal__close(aria-label='Close modal' data-micromodal-close)
+					+icon('close')
+				.modal__title Создание Товара
+			main.modal__content
+				form(action="#" class="form form-columns")
+					.form__block
+						label.form__label(for="product-name") Наименование
+						input(id="product-name" autocomplete="off" type="text" name="" class="form__input" placeholder="Название товара")
+						
+						//- label.form__label(for="description") Событие
+						//- textarea(id="description" autocomplete="off"  name="" class="form__area" placeholder="Описание товара")
+					.form__column
+						label.form__label(for="product-count") Количество
+						input(id="product-count" autocomplete="off" type="text" name="" class="form__input" placeholder="Количество товара")
+					.form__column
+						label.form__label(for="event-field") Цена
+						input(id="product-price" autocomplete="off" type="text" name="" class="form__input" placeholder="Цена")
+
+					.form__block
+						label.form__label(for="description") Описание
+						textarea(id="description" autocomplete="off"  name="" class="form__area" placeholder="Описание товара")
+
+					.form__block
+						.form__label.form__label--file Загрузить фото	
+						.form__thumbs
+							.form__thumb._fit
+								img._fit-img(src="img/thumb.jpg" alt="alt")
+							.form__files
+								label.form__file-label
+									span.form__false-file
+										+icon('exit')
+									input(type="file" name="" class="form__file" placeholder="Загрузить фото")
+
+
+				.modal__bottom
+					button(type="button").btn.modal__action ПОПОЛНИТЬ
+					.modal__message.modal__message--success Баланс кронов успешно пополнен
+					button(type="button").btn.btn-gray.modal__action Отмена

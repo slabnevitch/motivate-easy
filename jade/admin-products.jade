@@ -1,68 +1,62 @@
 extends _misc/main
 
 block title
-	| Товары
+	| Админка - Товары
 	- var page = 'admin';
 
 block content
-	.admin-edit
-		.admin-edit__wrapper
-			form.admin-search__form(action="#")
-				+icon('search')
-				label.admin-search__label
-					input(autocomplete="off" id="search-input" type="text" name="search" class="admin-search__input" placeholder="Введите имя участника")
-
-				button.btn.btn-md.admin-search__submit(type="submit") Поиск
-
-				.search-results
-					- for (var i=0; i < 3; i++)
-						.search-results__item Что-то найдено
+	.admin-products
+		.admin-products__wrapper
+			.admin-products__header
+				button(type="button" data-micromodal-open="product-create").btn.btn-sm.admin-products__add
+					+icon('close')
+					| Добавить Товар
 			
-			.admin-profile
-				.admin-profile__photo._fit
-					img._fit-img(src="img/user.jpg" alt="alt")
-				
-				.admin-profile__info
-					- let items = [{key: 'Имя', val: 'Tomiwa Oyeledu Dolapo'}, {key: 'Баланс', val: '1367'}, {key: 'Дата последней активности', val: 'Август 27th, 2023'}, {key: 'Количество активностей', val: '11'}];
-					
-					.admin-profile__column
-						each item, i in items
-							if i < items.length - 1
-								.admin-profile__item
-									.admin-profile__key= item.key
-									.admin-profile__val= item.val
-					
-					.admin-profile__column
-						each item, i in items
-							if i > items.length - 2
-								.admin-profile__item
-									.admin-profile__key= item.key
-									.admin-profile__val= item.val
+				.admin-products__filters
+					.admin-products__filter.filter-admin-products
+						.filter-admin-products__select
+							select(data-searchdisable="true" class="fstdropdown-select")
+								- let opts = ['all', 'some', 'else', 'some-else'];
+									each opt in opts
+										option(value=opt)= opt
+						.filter-admin-products__label
+							| Filter:
+							+icon('filter')
 
-					.admin-profile__actions
-						button.btn.btn-sm.admin-profile__button(data-micromodal-open="modal-refill")
-							+icon('close')
-							| Пополнить Кроны
+					.admin-products__filter.filter-admin-products
+						.filter-admin-products__select
+							select(data-searchdisable="true" class="fstdropdown-select")
+								- let opts2 = ['a-z', 'z-a'];
+									each opt in opts2
+										option(value=opt)= opt
+						
+						.filter-admin-products__label.filter-admin-products__label--sort
+							| Sort:
+							+icon('sort')
 
-						button.btn.btn-sm.btn-red.admin-profile__button(data-micromodal-open="modal-withdrawal")
-							+icon('close')
-							| Снять Кроны
-
-			.admin-edit__table
+			.admin-products__table
 				.table
 					.table__header.header-table
-						- let headerCols = ['Событие', 'Транзакция', 'Описание', 'Дата'];
+						- let headerCols = ['Actions', 'Наименование', 'Цена', 'Статус', 'Количество', 'Дата создания'];
 						.header-table__row
 							each col in headerCols
 								.header-table__column= col
 					
 					.table__body.body-table
-						- let bodyCols = ['Участие в вебинаре', '+100', 'Участиве в вебинаре “Раз Участиве в вебинаре “Раз', '19/09/2022'];
-						- for (var i=0; i < 8; i++)
+						- let bodyCols = ['Ручка', '1500', 'Активна', '21', '19/09/2022'];
+						- for (var i=0; i < 9; i++)
 							.body-table__row
+								.body-table__column
+									.body-table__label Actions
+									button.body-table__button(type="button")
+										+icon('edit')
+									button.body-table__button(type="button")
+										+icon('remove')
+
 								each col, ind in bodyCols
+									//- if ind > 0
 									.body-table__column
-										.body-table__label= headerCols[ind]
+										.body-table__label= headerCols[ind + 1]
 										.body-table__val= col
 
 			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
@@ -203,7 +197,7 @@ block page-scripts
 	//- script(src="js/libs/simplebar/simplebar.min.js")
 		
 	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
-	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+	script(src="js/libs/fstdropdown/fstdropdown.min.js")
 
 	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
 	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")

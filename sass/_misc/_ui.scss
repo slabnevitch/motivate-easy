@@ -156,6 +156,10 @@
         font-size: rem(14);
         font-weight: 400;
         line-height:  128.571%;
+
+        &--file{
+            color: #000;
+        }
     }
     &-columns{
         display: flex;
@@ -173,5 +177,43 @@
     &__block{
         flex: 1 1 100%;
     }
+    &__files{
+
+    }
+}
+.form__thumbs{
+    display: flex;
+    justify-content: flex-end;
+    gap: rem(17);
+}
+.form__thumb{
+    flex: 0 0 rem(80);
+    aspect-ratio: 1/1;
+}
+.form__files{
+
+}
+.form__file-label{
+}
+.form__false-file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(80);
+    height: rem(80);
+    position: relative;
+    border: 2px solid $blue;
+
+    .icon{
+        // @include absolute-center;
+        transform: rotate(-90deg);
+        color: $icons;
+        font-size: rem(18);
+    }
+
+}
+.form__file{
+    @include checkbox();
+    border: 2px solid $blue;
 }
 /*--------------------END ui----------------------*/ 

@@ -40,6 +40,7 @@
 	font-family: Roboto;
 	@include adaptive-value-rem('font-size', 20, 16, $maxWidth, $minWidth, 1);
 	font-weight: 700;
+	border-radius: 7px;
 
 	@include max-screen($xs){
 		padding-left: rem(50);
@@ -130,22 +131,22 @@
 
 	}
 
-	.table__header {
-		.header-table__row{
-			padding: 0  0 rem(21) 0;
-		}
 
-		@include max-screen($sm){
-			display: none;
-		}
-	
+}
+.table__header {
+	.header-table__row{
+		padding: 0  0 rem(21) 0;
 	}
-	.body-table__row {
-		@include max-screen($sm){
-			flex-direction: column;
-			
-		}
 
+	@include max-screen($sm){
+		display: none;
+	}
+
+}
+.body-table__row {
+	@include max-screen($sm){
+		flex-direction: column;
+		
 	}
 
 }

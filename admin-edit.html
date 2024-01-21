@@ -35,8 +35,8 @@
         </div>
       </header>
       <div class="main-content">
-        <div class="admin-search">
-          <div class="admin-search__wrapper">
+        <div class="admin-edit">
+          <div class="admin-edit__wrapper">
             <form action="#" class="admin-search__form">
                   <svg class="icon icon-search ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#search"></use>
@@ -51,6 +51,43 @@
                 <div class="search-results__item">Что-то найдено</div>
               </div>
             </form>
+            <div class="admin-profile">
+              <div class="admin-profile__photo _fit"><img src="img/user.jpg" alt="alt" class="_fit-img"></div>
+              <div class="admin-profile__info">
+                <div class="admin-profile__column">
+                  <div class="admin-profile__item">
+                    <div class="admin-profile__key">Имя</div>
+                    <div class="admin-profile__val">Tomiwa Oyeledu Dolapo</div>
+                  </div>
+                  <div class="admin-profile__item">
+                    <div class="admin-profile__key">Баланс</div>
+                    <div class="admin-profile__val">1367</div>
+                  </div>
+                  <div class="admin-profile__item">
+                    <div class="admin-profile__key">Дата последней активности</div>
+                    <div class="admin-profile__val">Август 27th, 2023</div>
+                  </div>
+                </div>
+                <div class="admin-profile__column">
+                  <div class="admin-profile__item">
+                    <div class="admin-profile__key">Количество активностей</div>
+                    <div class="admin-profile__val">11</div>
+                  </div>
+                </div>
+                <div class="admin-profile__actions">
+                  <button data-micromodal-open="modal-refill" class="btn btn-sm admin-profile__button">
+                        <svg class="icon icon-close ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                        </svg>Пополнить Кроны
+                  </button>
+                  <button data-micromodal-open="modal-withdrawal" class="btn btn-sm btn-red admin-profile__button">
+                        <svg class="icon icon-close ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                        </svg>Снять Кроны
+                  </button>
+                </div>
+              </div>
+            </div>
             <div class="admin-search__table">
               <div class="table">
                 <div class="table__header header-table">
@@ -230,12 +267,73 @@
                 </div>
           </div>
         </div>
+        <div id="modal-withdrawal" aria-hidden="true" class="modal micromodal-slide">
+          <div tabindex="-1" data-micromodal-close class="modal__overlay">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal__container">
+              <div class="modal__header">
+                <button aria-label="Close modal" data-micromodal-close class="modal__close">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                      </svg>
+                </button>
+                <div class="modal__title">Снятие Кронов</div>
+              </div>
+              <main class="modal__content">
+                <form action="#" class="form">
+                  <label for="withdrawal-field" class="form__label">Кроны</label>
+                  <input id="withdrawal-field" autocomplete="off" type="text" name="" placeholder="Количество кронов" class="form__input">
+                </form>
+                <div class="modal__bottom">
+                  <button type="button" data-micromodal-close class="btn modal__action">сНЯТЬ</button>
+                  <div class="modal__message modal__message--error">Ошибка снятия кронов, баланс уходит в минус</div>
+                  <button type="button" data-micromodal-close class="btn btn-gray modal__action">Отмена</button>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+        <div id="modal-refill" aria-hidden="true" class="modal micromodal-slide">
+          <div tabindex="-1" data-micromodal-close class="modal__overlay">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal__container">
+              <div class="modal__header">
+                <button aria-label="Close modal" data-micromodal-close class="modal__close">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                      </svg>
+                </button>
+                <div class="modal__title">Пополнение Кронов</div>
+              </div>
+              <main class="modal__content">
+                <form action="#" class="form form-columns">
+                  <div class="form__column">
+                    <label for="crons-field" class="form__label">Кроны</label>
+                    <input id="crons-field" autocomplete="off" type="text" name="" placeholder="Количество кронов" class="form__input">
+                  </div>
+                  <div class="form__column">
+                    <label for="event-field" class="form__label">Событие</label>
+                    <input id="events-field" autocomplete="off" type="text" name="" placeholder="Событие" class="form__input">
+                  </div>
+                  <div class="form__block">
+                    <label for="description" class="form__label">Событие</label>
+                    <textarea id="description" autocomplete="off" name="" placeholder="Описание товара" class="form__area"></textarea>
+                  </div>
+                </form>
+                <div class="modal__bottom">
+                  <button type="button" data-micromodal-close class="btn modal__action">ПОПОЛНИТЬ</button>
+                  <div class="modal__message modal__message--success">Баланс кронов успешно пополнен</div>
+                  <button type="button" data-micromodal-close class="btn btn-gray modal__action">Отмена</button>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     
     
     
     
+    <script src="js/libs/micromodal/micromodal.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

@@ -102,5 +102,30 @@
 			}
 		}
 		//END serch-results toggle 
+
+		// micromodal
+
+
+	if(document.querySelector('.modal') !== null){
+		MicroModal.init({
+			openTrigger: 'data-micromodal-open', 
+			closeTrigger: 'data-micromodal-close',
+			openClass: 'is-open', 
+			disableFocus: true, 
+			awaitOpenAnimation: true,
+			awaitCloseAnimation: true,
+			// disableScroll: true,
+			onShow: function(modal, trigger, event){
+				// при disableScroll: true для компенсации ширины скроллбара (фикс "прыгания" страницы влево)
+				// document.querySelector('#wrapper-for-scroll-fix').classList.add('modal-open');
+
+			},
+			onClose: function(modal) {
+				// при disableScroll: true для компенсации ширины скроллбара (фикс "прыгания" страницы влево)
+				// document.querySelector('#wrapper-for-scroll-fix').classList.remove('modal-open');
+			}
+		});		
+	}
+	// END micromodal
 	});
 })();

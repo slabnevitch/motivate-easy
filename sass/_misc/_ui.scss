@@ -20,15 +20,6 @@
   outline: none;
   transition: background-color .1s ease;
 	
- 
-  
-  &-md{
-   height: rem(37);
-  }
-   &-fw{
-   width: 100%;
-  }
-
   @media (any-hover: hover) { //только для устройств с ховером
   		cursor: pointer;
   		 &:hover{
@@ -40,6 +31,48 @@
 		   background-color: darken($blue, 5%);
 		  }
   	}
+ 
+  
+  &-md{
+   height: rem(37);
+  }
+  &-sm{
+    height: rem(32);
+    font-size: rem(12);
+  }
+  &-red{
+    background-color: $red;
+    @media (any-hover: hover) { //только для устройств с ховером
+        cursor: pointer;
+         &:hover{
+             background-color: lighten($red, 5%);
+          }
+           
+                
+          &:active{
+           background-color: darken($red, 5%);
+          }
+    }
+  }
+  &-gray{
+    color: $gray;
+    background-color: $gray-bg;
+    @media (any-hover: hover) { //только для устройств с ховером
+        cursor: pointer;
+         &:hover{
+             background-color: lighten($gray-bg, 5%);
+          }
+           
+                
+          &:active{
+           background-color: darken($gray-bg, 5%);
+          }
+    }
+  }
+   &-fw{
+   width: 100%;
+  }
+
    
 }
 .pagination{
@@ -88,5 +121,57 @@
 }
 .pagination__arrow--prev{
     flex-direction: row-reverse;
+}
+
+.form{
+    &__input,
+    &__area{
+        display: block;
+        padding: 0 rem(8);
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid $border;
+        background: #FFF;
+        @include placecolor($border);
+
+        &:not(:last-child){
+          margin-bottom: rem(40);  
+        }
+
+    }
+    &__area{
+        padding-top: rem(7);
+        height: rem(75);
+        width: 100%;
+        text-align: right;
+        font-family: 'Rubik', sans-serif;
+        font-size: rem(14);
+        font-weight: 400;
+        line-height:  128.571%;
+    }
+    &__label{
+        margin-bottom: rem(3);
+        color: $text;
+       font-family: 'Rubik', sans-serif;
+        font-size: rem(14);
+        font-weight: 400;
+        line-height:  128.571%;
+    }
+    &-columns{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: rem(20);
+        column-gap: rem(27);
+    }
+    &__column{
+        flex: 1 0 calc(50% - rem(27));
+
+        @include max-screen($xss){
+            flex: 0 0 100%;
+        }
+    }
+    &__block{
+        flex: 1 1 100%;
+    }
 }
 /*--------------------END ui----------------------*/ 

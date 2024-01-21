@@ -47,7 +47,7 @@ mixin pagination(items = [1, 2, 3, '...', 15], arrowClass = '', iconPrev = false
 		ul.pagination__list
 			each item, i in items
 				li.pagination__item
-					a(class=i==3 ? "pagination__link active" : "pagination__link" href='#')= item
+					a(class=i==1 ? "pagination__link active" : "pagination__link" href='#')= item
 		button(class=arrowClass ? "pagination__arrow pagination__arrow--next" + ' ' + arrowClass : "pagination__arrow pagination__arrow--next") Next
 				if iconNext
 					+icon(iconNext)

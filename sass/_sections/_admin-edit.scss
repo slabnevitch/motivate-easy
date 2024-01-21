@@ -1,0 +1,103 @@
+/*--------------------admin-edit----------------------*/
+.admin-profile {
+	display: flex;
+	gap: rem(29);
+	margin-bottom: rem(10);
+	padding: rem(38) rem(23) rem(46) 0;
+	@include adaptive-value-rem('padding-left', 58, 23, $maxWidth, $minWidth, 1);
+	background-color: #fff;
+	border-radius: 7px;
+	font-family: 'Poppins', sans-serif;
+
+	@include max-screen($sm){
+		flex-direction: column;
+	}
+}
+.admin-profile__photo {
+	flex: 0 0 rem(258);
+	align-self: start;
+	aspect-ratio: 258/325;
+	border-radius: rem(30);
+	overflow: hidden;
+
+	@include max-screen($sm){
+		flex: 0 0 50%;
+		width: 50%;
+	}
+	@include max-screen($xs){
+		flex: 0 0 100%;
+		width: 100%;
+	}
+}
+.admin-profile__info {
+	flex: 1 1 auto;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: rem(30);
+	row-gap: rem(38);
+	color: #000;
+	font-family: 'Poppins', sans-serif;
+
+	@include min-screen($sm){
+		
+		padding-top: rem(44);
+	}
+	@include max-screen($xss){
+		flex-direction: column;
+	}
+}
+.admin-profile__column {
+	flex: 0 0 calc(50% - rem(30));
+}
+.admin-profile__item {
+	&:not(:last-child){
+		margin-bottom: rem(20);
+	}
+
+}	
+.admin-profile__key {
+	margin-bottom: rem(7);
+	color: rgba(#000, .5);
+	font-size: rem(15);
+	font-weight: 600;
+	letter-spacing: 0.15px;
+}
+.admin-profile__val {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.admin-profile__actions {
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	@include adaptive-value-rem('gap', 36, 10, $maxWidth, $minWidth, 1);
+
+	@include max-screen($sm){
+			justify-content: center;
+		}	
+}
+.btn {}
+.btn-sm {}
+.admin-profile__button {
+	flex: 0 0 rem(180);
+	justify-content: flex-start;
+	gap: rem(17);
+	padding-left: rem(8);
+	padding-right: rem(8);
+	text-transform: none;
+	
+	@include max-screen($xss){
+		flex: 0 0 100%;
+	}
+	.icon{
+		font-size: rem(18);
+		color: #fff;
+	}
+
+}
+.icon {}
+.icon-close {}
+.btn-red {}
+/*--------------------END admin-edit----------------------*/ 

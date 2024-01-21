@@ -4,8 +4,6 @@ header.header
 			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Участники', icon: 'peoples'}];
 		
 			.header__menu.menu-header
-				button.toggle-mnu
-					span
 				nav.menu-header__body
 					ul.header-menu
 						each item in menu
@@ -18,12 +16,12 @@ header.header
 				a(href="#").header__user.header__item
 					+icon('exit')
 					span Выйти
+			button.toggle-mnu
+				span
 		else
 			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}];
 		
-			header__menu.menu-header
-				button.toggle-mnu
-					span
+			.header__menu.menu-header
 				nav.menu-header__body
 					ul.header-menu
 						each item in menu
@@ -39,3 +37,5 @@ header.header
 				a(href="#").header__user.header__item
 					+icon('exit')
 					span Выйти
+			button.toggle-mnu
+				span

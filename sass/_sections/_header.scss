@@ -4,6 +4,7 @@
 	z-index: 5;
 }
 .header__wrapper {
+	position: relative;
 	display: flex;
 	column-gap: rem(30);
 	min-height: rem(54);
@@ -16,7 +17,7 @@
 	position: relative;
 	&:before{
 		content: '';
-		display: block;
+		display: none;
 		height: rem(54);
 		position: fixed;
 		top: 0;
@@ -25,9 +26,13 @@
 		background-color: #fff;
 		z-index: 2;
 
+
 		@include min-screen($sm){
 			display: none;
 		}
+	}
+	.menu-opened &{
+		display: block;
 	}
 }
 .menu-header {}
@@ -128,9 +133,8 @@
 	align-items: center;
 	column-gap: rem(10);
 	color: #000;
-	font-family: Inter;
+	font-family: 'Inter', sans-serif;
 	font-size: rem(12);
-	font-style: normal;
 	font-weight: 400;
 	text-decoration: none;
 	border-bottom: 3px solid transparent;
@@ -138,11 +142,14 @@
 		font-size: rem(15);
 		color: $icons;
 	}
-	@media (any-hover: hover) { //только для устройств с ховером
-		cursor: pointer;
-		&:hover{
-			border-bottom-color: $orange;
+	&:not(.header__wallet){
+		@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+			&:hover{
+				border-bottom-color: $orange;
+			}
 		}
+
 	}
 }
 /*--------------------END header----------------------*/ 

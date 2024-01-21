@@ -72,6 +72,13 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+	.fstdropdown > .fstlist{
+		box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+		min-width: rem(100);
+	}
+	.fstdiv.open{
+		z-index: 98;
+	}
 }
 .fstdropdown-select {}
 .filter-admin-products__label {

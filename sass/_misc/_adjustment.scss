@@ -260,7 +260,7 @@ padding-bottom: 52.25%;
 // @import "_misc/multilevel-dropdown.scss";
 
 .toggle-mnu{
-	position: fixed;
+	position: absolute;
 	right: rem(30);
 	top: rem(5);
   display: block;

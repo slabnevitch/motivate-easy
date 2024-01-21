@@ -182,7 +182,7 @@ html, body {
   flex: 0 0 auto;
 }
 .main .main-content {
-  padding-top: 2.6875rem;
+  padding: 2.6875rem 0;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
@@ -430,11 +430,95 @@ textarea {
   }
 }
 
+.pagination {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 0.1875rem;
+  margin-top: 0.9375rem;
+  font-family: Rubik;
+  font-weight: 400;
+}
+.pagination .pagination__arrow {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: #383838;
+}
+.pagination .pagination__arrow[disabled] {
+  color: rgba(0, 0, 0, 0.12);
+}
+.pagination .pagination__list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  column-gap: 0.1875rem;
+}
+.pagination .pagination__item {
+  list-style-type: none;
+}
+.pagination .pagination__link {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 2.125rem;
+  height: 2.125rem;
+  font-size: 0.875rem;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #535353;
+}
+.pagination .pagination__link.active {
+  color: #fff;
+  background-color: #85B6FF;
+}
+
+.pagination__link {
+  text-decoration: none;
+}
+@media (any-hover: hover) {
+  .pagination__link {
+    cursor: pointer;
+  }
+  .pagination__link:hover {
+    color: #000;
+  }
+}
+
+.pagination__arrow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+  color: #383838;
+}
+@media (any-hover: hover) {
+  .pagination__arrow {
+    cursor: pointer;
+  }
+  .pagination__arrow:hover {
+    color: #000;
+  }
+}
+.pagination__arrow .icon {
+  font-size: 0.75rem;
+}
+
+.pagination__arrow--prev {
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
 /*--------------------END ui----------------------*/
 /*--------------------admin-search----------------------*/
 .admin-search__form {
-  margin-bottom: 2.1875rem;
-  padding: 0 1rem 0 5.0625rem;
+  margin-bottom: 0.9375rem;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -443,6 +527,12 @@ textarea {
   background: #FFF;
   box-shadow: 0px 4px 14px 0px #E5E5E5;
   border-radius: 7px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 36em) {
+  .admin-search__form {
+    padding: 0 1rem 0 0;
+  }
 }
 @media only screen and (max-width: 47.99875em) {
   .admin-search__form {
@@ -452,9 +542,7 @@ textarea {
 }
 .admin-search__form .icon {
   position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  top: 1.25rem;
   color: #85B6FF;
   left: 1.0475rem;
   font-size: 1.28rem;
@@ -467,6 +555,7 @@ textarea {
 }
 
 .admin-search__input {
+  padding-left: 5.0625rem;
   height: 3.5625rem;
   color: #C4C4C4;
   font-family: Roboto;
@@ -489,15 +578,27 @@ textarea {
   color: #C4C4C4;
   opacity: 1;
 }
+@media (max-width: 67.5em) {
+  .admin-search__input {
+    font-size: clamp( 1rem , 0.9166666667rem  +  0.4166666667vw , 1.25rem );
+  }
+}
+@media only screen and (max-width: 36em) {
+  .admin-search__input {
+    padding-left: 3.125rem;
+  }
+}
 
 .admin-search__submit {
   -ms-flex: 0 0 8.875rem;
   flex: 0 0 8.875rem;
 }
-@media only screen and (max-width: 47.99875em) {
+@media only screen and (max-width: 36em) {
   .admin-search__submit {
-    -ms-flex: 0 0 100%;
-    flex: 0 0 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin: 0 1rem 0 1rem;
+    margin-bottom: 0.625rem;
   }
 }
 
@@ -544,6 +645,63 @@ textarea {
   }
 }
 
+.admin-search__table .header-table__column,
+.admin-search__table .body-table__column {
+  text-align: center;
+}
+.admin-search__table .header-table__column:first-child,
+.admin-search__table .body-table__column:first-child {
+  -ms-flex: 1 1 37.7777777778%;
+  flex: 1 1 37.7777777778%;
+}
+.admin-search__table .header-table__column:nth-child(2),
+.admin-search__table .body-table__column:nth-child(2) {
+  -ms-flex: 1 1 15.462962963%;
+  flex: 1 1 15.462962963%;
+}
+.admin-search__table .header-table__column:nth-child(3),
+.admin-search__table .body-table__column:nth-child(3) {
+  -ms-flex: 1 1 22.7777777778%;
+  flex: 1 1 22.7777777778%;
+}
+.admin-search__table .header-table__column:nth-child(4),
+.admin-search__table .body-table__column:nth-child(4) {
+  -ms-flex: 1 1 23.7962962963%;
+  flex: 1 1 23.7962962963%;
+}
+@media only screen and (max-width: 47.99875em) {
+  .admin-search__table .header-table__column,
+  .admin-search__table .body-table__column {
+    text-align: left;
+  }
+  .admin-search__table .header-table__column:not(:last-child),
+  .admin-search__table .body-table__column:not(:last-child) {
+    margin-bottom: 0.625rem;
+  }
+}
+.admin-search__table .table__header .header-table__row {
+  padding: 1.3125rem 0;
+}
+@media only screen and (max-width: 47.99875em) {
+  .admin-search__table .table__header {
+    display: none;
+  }
+}
+@media only screen and (max-width: 47.99875em) {
+  .admin-search__table .body-table__row {
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.header-table {
+  color: #535353;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+}
+
 .header-table__row {
   display: -ms-flexbox;
   display: flex;
@@ -554,6 +712,25 @@ textarea {
   display: -ms-flexbox;
   display: flex;
   column-gap: 1.875rem;
+  padding: 1.6875rem 0.9375rem 2.0625rem 0.9375rem;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.body-table__row:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.body-table__label {
+  color: #535353;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+}
+@media only screen and (min-width: 47.99875em) {
+  .body-table__label {
+    display: none;
+  }
 }
 
 /*--------------------END admin-search----------------------*/
@@ -688,7 +865,7 @@ textarea {
   position: relative;
   z-index: 3;
 }
-@media only screen and (min-width: 67.5em) {
+@media only screen and (min-width: 76.875em) {
   .header__actions {
     margin-right: -6.25rem;
   }
@@ -752,10 +929,6 @@ textarea {
 
 /*--------------------END header----------------------*/
 /*--------------------products----------------------*/
-.products {
-  padding-bottom: 2.6875rem;
-}
-
 .products__wrapper {
   display: -ms-grid;
   display: grid;

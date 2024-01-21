@@ -42,4 +42,51 @@
   	}
    
 }
+.pagination{
+  @include pagination($width: 34, 
+    $gap: 3, 
+    $fontSize: 14, 
+    $round: 4px, 
+    $color: $text, 
+    $bg: transparent, 
+    $activeColor: #fff, 
+    $activeBg: $blue,
+    $arrowColor: $text-dark);
+
+  margin-top: rem(15);
+  font-family: Rubik;
+    font-weight: 400;
+}
+.pagination__link{
+    text-decoration: none;
+
+    @media (any-hover: hover) { //только для устройств с ховером
+            cursor: pointer;
+            &:hover{
+                color: #000;
+            }
+        }
+}
+.pagination__arrow{
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    color: $text-dark;
+
+
+    @media (any-hover: hover) { //только для устройств с ховером
+            cursor: pointer;
+            &:hover{
+                color: #000;
+            }
+        }
+
+    .icon{
+        font-size: rem(12);
+        // color: $text-dark;
+    }
+}
+.pagination__arrow--prev{
+    flex-direction: row-reverse;
+}
 /*--------------------END ui----------------------*/ 

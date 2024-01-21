@@ -98,7 +98,7 @@
 	position: relative;
 	z-index: 3;
 
-	@include min-screen($lg){
+	@include min-screen(em($maxWidthContainer + 150)){
 		margin-right: rem(-100);
 	}
 }

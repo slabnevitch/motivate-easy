@@ -24,14 +24,19 @@ block content
 						- let headerCols = ['Имя', 'Баланс', 'Количество активностей', 'Последняя активность'];
 						.header-table__row
 							each col in headerCols
-								.table__column= col
+								.header-table__column= col
 					
 					.table__body.body-table
 						- let bodyCols = ['Иванов Иван Иванович', '1234', '11', '19/09/2022'];
 						- for (var i=0; i < 8; i++)
 							.body-table__row
-								each col in bodyCols
-									.body-table__column= col
+								each col, ind in bodyCols
+									.body-table__column
+										.body-table__label= headerCols[ind]
+										.body-table__val= col
+
+			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
+
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

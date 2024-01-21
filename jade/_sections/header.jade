@@ -1,22 +1,41 @@
 header.header
 	.header__wrapper
-		- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}];
+		if page === 'admin'
+			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Участники', icon: 'peoples'}];
 		
-		.header__menu.menu-header
-			button.toggle-mnu
-				span
-			nav.menu-header__body
-				ul.header-menu
-					each item in menu
-						li.header-menu__item
-							a(href="#").header-menu__link.header__item
-								+icon(item.icon)
-								span.header-menu__span= item.title
+			.header__menu.menu-header
+				button.toggle-mnu
+					span
+				nav.menu-header__body
+					ul.header-menu
+						each item in menu
+							li.header-menu__item
+								a(href="#").header-menu__link.header__item
+									+icon(item.icon)
+									span.header-menu__span= item.title
 
-		.header__actions
-			.header__wallet.header__item
-				+icon('wallet')
-				span 24452
-			a(href="#").header__user.header__item
-				+icon('exit')
-				span Выйти
+			.header__actions
+				a(href="#").header__user.header__item
+					+icon('exit')
+					span Выйти
+		else
+			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}];
+		
+			header__menu.menu-header
+				button.toggle-mnu
+					span
+				nav.menu-header__body
+					ul.header-menu
+						each item in menu
+							li.header-menu__item
+								a(href="#").header-menu__link.header__item
+									+icon(item.icon)
+									span.header-menu__span= item.title
+
+			.header__actions
+				.header__wallet.header__item
+					+icon('wallet')
+					span 24452
+				a(href="#").header__user.header__item
+					+icon('exit')
+					span Выйти

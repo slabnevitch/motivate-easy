@@ -41,14 +41,14 @@ mixin swiper(classname, pagination, scrollbar, navigation)
 //- вызов: +pagination(items, 'icon-chev-down', 'chev-left', 'chev-right')
 mixin pagination(items = [1, 2, 3, '...', 15], arrowClass = '', iconPrev = false, iconNext = false)
 	.pagination
-		button(class=arrowClass ? "pagination__arrow pagination__arrow--prev" + ' ' + arrowClass : "pagination__arrow pagination__arrow--prev" disabled='')
+		button(class=arrowClass ? "pagination__arrow pagination__arrow--prev" + ' ' + arrowClass : "pagination__arrow pagination__arrow--prev") Prev
 				if iconPrev
 					+icon(iconPrev)
 		ul.pagination__list
 			each item, i in items
 				li.pagination__item
 					a(class=i==3 ? "pagination__link active" : "pagination__link" href='#')= item
-		button(class=arrowClass ? "pagination__arrow pagination__arrow--next" + ' ' + arrowClass : "pagination__arrow pagination__arrow--next")
+		button(class=arrowClass ? "pagination__arrow pagination__arrow--next" + ' ' + arrowClass : "pagination__arrow pagination__arrow--next") Next
 				if iconNext
 					+icon(iconNext)
 

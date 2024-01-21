@@ -144,7 +144,7 @@ $mins: '')) {
 	
 	display: flex;
 	align-items: center;
-	column-gap: rem(#{$gap});
+	column-gap: rem($gap);
 
 	.pagination__arrow {
 		@include but-null;
@@ -155,17 +155,17 @@ $mins: '')) {
 		}
 	}
 
-	.pagination__arrow--prev {
-		transform: rotate(90deg);
-	}
-	.pagination__arrow--next {
-		transform: rotate(-90deg);
-	}
+	// .pagination__arrow--prev {
+	// 	transform: rotate(90deg);
+	// }
+	// .pagination__arrow--next {
+	// 	transform: rotate(-90deg);
+	// }
 
 	.pagination__list {
 		display: flex;
 		align-items: center;
-		column-gap: rem(#{$gap});
+		column-gap: rem($gap);
 	}
 
 	.pagination__item{
@@ -176,9 +176,9 @@ $mins: '')) {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: rem(#{$width});
-		height: rem(#{$width});
-		font-size:rem(#{$fontSize});
+		width: rem($width);
+		height: rem($width);
+		font-size:rem($fontSize);
 		@if $round != false { 
 			border-radius: $round;
 	  }

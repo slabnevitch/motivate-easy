@@ -41,11 +41,11 @@ block content
 
 					.admin-profile__actions
 						button.btn.btn-sm.admin-profile__button(data-micromodal-open="modal-refill")
-							+icon('close')
+							+icon('plus')
 							| Пополнить Кроны
 
 						button.btn.btn-sm.btn-red.admin-profile__button(data-micromodal-open="modal-withdrawal")
-							+icon('close')
+							+icon('minus')
 							| Снять Кроны
 
 			.admin-edit__table
@@ -68,7 +68,8 @@ block content
 			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
 
 	include _misc/modals
-
+	+modal-withdrawal()
+	+modal-refill()
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

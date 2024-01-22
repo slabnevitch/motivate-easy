@@ -9,7 +9,7 @@ block content
 		.admin-products__wrapper
 			.admin-products__header
 				button(type="button" data-micromodal-open="product-create").btn.btn-sm.admin-products__add
-					+icon('close')
+					+icon('plus')
 					| Добавить Товар
 			
 				.admin-products__filters
@@ -62,7 +62,8 @@ block content
 			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
 
 	include _misc/modals
-
+	+product-edit()
+	+product-create()
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 

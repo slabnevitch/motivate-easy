@@ -149,6 +149,7 @@ $mins: '')) {
 	.pagination__arrow {
 		@include but-null;
 		color: $arrowColor;
+		text-decoration: none;
 
 		&[disabled]{
 			color: rgba(#000, .12);

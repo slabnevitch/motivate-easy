@@ -91,9 +91,19 @@
   width: 1em;
 }
 
+.icon-minus {
+  font-size: 1.5rem;
+  width: 1em;
+}
+
 .icon-peoples {
   font-size: 1.1rem;
   width: 1.3636363636em;
+}
+
+.icon-plus {
+  font-size: 1.6rem;
+  width: 1em;
 }
 
 .icon-prods {
@@ -822,6 +832,7 @@ textarea {
   background-color: transparent;
   border: none;
   color: #383838;
+  text-decoration: none;
 }
 .pagination .pagination__arrow[disabled] {
   color: rgba(0, 0, 0, 0.12);
@@ -1075,6 +1086,9 @@ textarea {
 .admin-profile__button .icon, .admin-products__add .icon {
   font-size: 1.125rem;
   color: #fff;
+}
+.admin-profile__button .icon-minus, .admin-products__add .icon-minus {
+  font-size: 1rem;
 }
 
 .admin-edit__table .header-table__column,

@@ -1,7 +1,7 @@
 extends _misc/main
 
 block title
-	| Админка - Товары
+	| Админ - Товары
 	- var page = 'admin';
 
 block content
@@ -48,10 +48,10 @@ block content
 							.body-table__row
 								.body-table__column
 									.body-table__label Actions
-									button.body-table__button(type="button")
+									button.body-table__button(type="button" data-micromodal-open="product-edit")
 										+icon('edit')
 									button.body-table__button(type="button")
-										+icon('remove')
+										+icon('delete')
 
 								each col, ind in bodyCols
 									//- if ind > 0

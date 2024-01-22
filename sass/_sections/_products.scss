@@ -1,6 +1,8 @@
 /*--------------------products----------------------*/
 .products {
-	
+	.pagination__wrapper{
+		margin-top: rem(30);
+	}
 }
 .products__wrapper {
 	display: grid;
@@ -23,6 +25,7 @@
 	margin-bottom: rem(29);
 }
 .product-card__body {
+	padding-right: rem(55);
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -34,7 +37,11 @@
 	letter-spacing: 0.1px;
 }
 .product-card__title {
-	max-width: rem(170);
+
+	@include min-screen($md){
+		max-width: rem(200);
+		
+	}
 }
 .product-card__price {
 	margin-top: auto;

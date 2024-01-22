@@ -6,9 +6,9 @@ header.header
 			.header__menu.menu-header
 				nav.menu-header__body
 					ul.header-menu
-						each item in menu
+						each item, i in menu
 							li.header-menu__item
-								a(href="#").header-menu__link.header__item
+								a(href="#" class=i==index ? "header-menu__link header__item active" : "header-menu__link header__item")
 									+icon(item.icon)
 									span.header-menu__span= item.title
 
@@ -24,9 +24,9 @@ header.header
 			.header__menu.menu-header
 				nav.menu-header__body
 					ul.header-menu
-						each item in menu
+						each item, i in menu
 							li.header-menu__item
-								a(href="#").header-menu__link.header__item
+								a(href="#" class=i==index ? "header-menu__link header__item active" : "header-menu__link header__item")
 									+icon(item.icon)
 									span.header-menu__span= item.title
 

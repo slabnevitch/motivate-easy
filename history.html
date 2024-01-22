@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Админ - Редактирование
+    <title>История
     </title>
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
@@ -20,74 +20,37 @@
                         <svg class="icon icon-prods ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#prods"></use>
                         </svg><span class="header-menu__span">Товары</span></a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
+                        <svg class="icon icon-events ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#events"></use>
+                        </svg><span class="header-menu__span">Мероприятия</span></a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link header__item active">
-                        <svg class="icon icon-peoples ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#peoples"></use>
-                        </svg><span class="header-menu__span">Участники</span></a></li>
+                        <svg class="icon icon-history ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#history"></use>
+                        </svg><span class="header-menu__span">Моя истoрия</span></a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
+                        <svg class="icon icon-handler ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#handler"></use>
+                        </svg><span class="header-menu__span">Управление</span></a></li>
               </ul>
             </nav>
           </div>
-          <div class="header__actions"><a href="#" class="header__user header__item">
+          <div class="header__actions">
+            <div class="header__wallet header__item">
+                  <svg class="icon icon-wallet ">
+                    <use xlink:href="img/icons-svg/symbol/sprite.svg#wallet"></use>
+                  </svg><span>24452</span>
+            </div><a href="#" class="header__user header__item">
                   <svg class="icon icon-exit ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#exit"></use>
-                  </svg><span>Выйти</span></a></div>
+                  </svg><span>Выйти</span></a>
+          </div>
           <button class="toggle-mnu"><span></span></button>
         </div>
       </header>
       <div class="main-content">
-        <div class="admin-edit">
-          <div class="admin-edit__wrapper">
-            <form action="#" class="admin-search__form">
-                  <svg class="icon icon-search ">
-                    <use xlink:href="img/icons-svg/symbol/sprite.svg#search"></use>
-                  </svg>
-              <label class="admin-search__label">
-                <input autocomplete="off" id="search-input" type="text" name="search" placeholder="Введите имя участника" class="admin-search__input">
-              </label>
-              <button type="submit" class="btn btn-md admin-search__submit">Поиск</button>
-              <div class="search-results">
-                <div class="search-results__item">Что-то найдено</div>
-                <div class="search-results__item">Что-то найдено</div>
-                <div class="search-results__item">Что-то найдено</div>
-              </div>
-            </form>
-            <div class="admin-profile">
-              <div class="admin-profile__photo _fit"><img src="img/user.jpg" alt="alt" class="_fit-img"></div>
-              <div class="admin-profile__info">
-                <div class="admin-profile__column">
-                  <div class="admin-profile__item">
-                    <div class="admin-profile__key">Имя</div>
-                    <div class="admin-profile__val">Tomiwa Oyeledu Dolapo</div>
-                  </div>
-                  <div class="admin-profile__item">
-                    <div class="admin-profile__key">Баланс</div>
-                    <div class="admin-profile__val">1367</div>
-                  </div>
-                  <div class="admin-profile__item">
-                    <div class="admin-profile__key">Дата последней активности</div>
-                    <div class="admin-profile__val">Август 27th, 2023</div>
-                  </div>
-                </div>
-                <div class="admin-profile__column">
-                  <div class="admin-profile__item">
-                    <div class="admin-profile__key">Количество активностей</div>
-                    <div class="admin-profile__val">11</div>
-                  </div>
-                </div>
-                <div class="admin-profile__actions">
-                  <button data-micromodal-open="modal-refill" class="btn btn-sm admin-profile__button">
-                        <svg class="icon icon-close ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
-                        </svg>Пополнить Кроны
-                  </button>
-                  <button data-micromodal-open="modal-withdrawal" class="btn btn-sm btn-red admin-profile__button">
-                        <svg class="icon icon-close ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
-                        </svg>Снять Кроны
-                  </button>
-                </div>
-              </div>
-            </div>
+        <div class="admin-history">
+          <div class="admin-history__wrapper">
             <div class="admin-edit__table">
               <div class="table">
                 <div class="table__header header-table">
@@ -435,6 +398,7 @@
     
     
     <script src="js/libs/micromodal/micromodal.js"></script>
+    <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

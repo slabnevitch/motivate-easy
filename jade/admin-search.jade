@@ -1,9 +1,9 @@
 extends _misc/main
 
 block title
-	| Товары
+	| Админ - Поиск
 	- var page = 'admin';
-
+	- var index = 1;
 block content
 	.admin-search
 		.admin-search__wrapper
@@ -33,7 +33,11 @@ block content
 								each col, ind in bodyCols
 									.body-table__column
 										.body-table__label= headerCols[ind]
-										.body-table__val= col
+										if ind == 0
+
+											a(href="admin-edit.html").body-table__val= col
+										else
+											.body-table__val= col
 
 			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
 

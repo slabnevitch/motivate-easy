@@ -5,12 +5,7 @@
 		margin-bottom: rem(12);
 		margin-left: rem(-24);
 		margin-right: rem(-24);
-		text-align: right;
 		background-color: #F8FAFB;
-
-		&__input{
-			text-align: right;
-		}
 	}
 }
 .micromodal-slide {
@@ -57,7 +52,7 @@
 
 .modal__bottom {
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
 	gap: rem(30);
 
 	@include max-screen($xs){

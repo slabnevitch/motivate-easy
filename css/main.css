@@ -56,6 +56,11 @@
   width: 1.0416666667em;
 }
 
+.icon-delete {
+  font-size: 2.2rem;
+  width: 0.9090909091em;
+}
+
 .icon-edit {
   font-size: 2.2rem;
   width: 1em;
@@ -966,7 +971,6 @@ textarea {
   padding-top: 0.4375rem;
   height: 4.6875rem;
   width: 100%;
-  text-align: right;
   font-family: "Rubik", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -982,6 +986,7 @@ textarea {
 }
 .form__label--file {
   color: #000;
+  text-align: right;
 }
 .form-columns {
   display: -ms-flexbox;
@@ -1730,6 +1735,38 @@ textarea {
 .header-menu__item {
   list-style-type: none;
 }
+.header-menu__item:first-child .header-menu__link.active {
+  border-bottom-color: #FEA901;
+}
+@media (any-hover: hover) {
+  .header-menu__item:first-child .header-menu__link:hover {
+    border-bottom-color: #FEA901;
+  }
+}
+.header-menu__item:nth-child(2) .header-menu__link.active {
+  border-bottom-color: #5C9D33;
+}
+@media (any-hover: hover) {
+  .header-menu__item:nth-child(2) .header-menu__link:hover {
+    border-bottom-color: #5C9D33;
+  }
+}
+.header-menu__item:nth-child(3) .header-menu__link.active {
+  border-bottom-color: #37B38E;
+}
+@media (any-hover: hover) {
+  .header-menu__item:nth-child(3) .header-menu__link:hover {
+    border-bottom-color: #37B38E;
+  }
+}
+.header-menu__item:nth-child(4) .header-menu__link.active {
+  border-bottom-color: #3795B3;
+}
+@media (any-hover: hover) {
+  .header-menu__item:nth-child(4) .header-menu__link:hover {
+    border-bottom-color: #3795B3;
+  }
+}
 
 .header-menu__link {
   transition: all 0.4s;
@@ -1741,9 +1778,6 @@ textarea {
 @media (any-hover: hover) {
   .header-menu__link {
     cursor: pointer;
-  }
-  .header-menu__link:hover {
-    border-bottom-color: #FEA901;
   }
 }
 @media only screen and (max-width: 47.99875em) {
@@ -1774,6 +1808,14 @@ textarea {
   }
 }
 
+.header__wallet {
+  max-width: 4.6875rem;
+}
+.header__wallet span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .header__wallet.header__item {
   padding-left: 0;
   padding-right: 0;
@@ -1787,6 +1829,14 @@ textarea {
 .header__user {
   border-bottom: 3px solid transparent;
   transition: all 0.4s;
+}
+@media (any-hover: hover) {
+  .header__user.active {
+    border-bottom-color: #6637B3;
+  }
+  .header__user:hover {
+    border-bottom-color: #6637B3;
+  }
 }
 
 .header__item {
@@ -1820,14 +1870,6 @@ textarea {
   font-size: 0.9375rem;
   color: #85B6FF;
 }
-@media (any-hover: hover) {
-  .header__item:not(.header__wallet) {
-    cursor: pointer;
-  }
-  .header__item:not(.header__wallet):hover {
-    border-bottom-color: #FEA901;
-  }
-}
 
 /*--------------------END header----------------------*/
 /*--------------------modals----------------------*/
@@ -1836,11 +1878,7 @@ textarea {
   margin-bottom: 0.75rem;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
-  text-align: right;
   background-color: #F8FAFB;
-}
-.modal .form__input {
-  text-align: right;
 }
 
 .modal__container {
@@ -1885,8 +1923,8 @@ textarea {
 .modal__bottom {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
   gap: 1.875rem;
 }
 @media only screen and (max-width: 36em) {
@@ -1934,6 +1972,10 @@ textarea {
 
 /*--------------------END modals----------------------*/
 /*--------------------products----------------------*/
+.products .pagination__wrapper {
+  margin-top: 1.875rem;
+}
+
 .products__wrapper {
   display: -ms-grid;
   display: grid;
@@ -1968,6 +2010,7 @@ textarea {
 }
 
 .product-card__body {
+  padding-right: 3.4375rem;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -1982,8 +2025,10 @@ textarea {
   letter-spacing: 0.1px;
 }
 
-.product-card__title {
-  max-width: 10.625rem;
+@media only screen and (min-width: 61.9375em) {
+  .product-card__title {
+    max-width: 12.5rem;
+  }
 }
 
 .product-card__price {

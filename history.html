@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Админ - История
+    <title>История
     </title>
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
@@ -24,7 +24,7 @@
                         <svg class="icon icon-events ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#events"></use>
                         </svg><span class="header-menu__span">Мероприятия</span></a></li>
-                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
+                <li class="header-menu__item"><a href="#" class="header-menu__link header__item active">
                         <svg class="icon icon-history ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#history"></use>
                         </svg><span class="header-menu__span">Моя истoрия</span></a></li>
@@ -249,7 +249,6 @@
                 <div class="modal__bottom">
                   <button type="button" class="btn modal__action">сНЯТЬ</button>
                   <div class="modal__message modal__message--error">Ошибка снятия кронов, баланс уходит в минус</div>
-                  <button type="button" class="btn btn-gray modal__action">Отмена</button>
                 </div>
               </main>
             </div>
@@ -284,7 +283,6 @@
                 <div class="modal__bottom">
                   <button type="button" class="btn modal__action">ПОПОЛНИТЬ</button>
                   <div class="modal__message modal__message--success">Баланс кронов успешно пополнен</div>
-                  <button type="button" class="btn btn-gray modal__action">Отмена</button>
                 </div>
               </main>
             </div>
@@ -322,7 +320,6 @@
                   <div class="form__block">
                     <div class="form__label form__label--file">Загрузить фото	</div>
                     <div class="form__thumbs">
-                      <div class="form__thumb _fit"><img src="img/thumb.jpg" alt="alt" class="_fit-img"></div>
                       <div class="form__files">
                         <label class="form__file-label"><span class="form__false-file">
                                 <svg class="icon icon-exit ">
@@ -335,9 +332,59 @@
                   </div>
                 </form>
                 <div class="modal__bottom">
-                  <button type="button" class="btn modal__action">ПОПОЛНИТЬ</button>
-                  <div class="modal__message modal__message--success">Баланс кронов успешно пополнен</div>
-                  <button type="button" class="btn btn-gray modal__action">Отмена</button>
+                  <button type="button" class="btn modal__action">Добавить</button>
+                  <div class="modal__message modal__message--success">Товар успешно добавлен</div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+        <div id="product-edit" aria-hidden="true" class="modal micromodal-slide">
+          <div tabindex="-1" data-micromodal-close class="modal__overlay">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal__container">
+              <div class="modal__header">
+                <button aria-label="Close modal" data-micromodal-close class="modal__close">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                      </svg>
+                </button>
+                <div class="modal__title">Создание Товара</div>
+              </div>
+              <main class="modal__content">
+                <form action="#" class="form form-columns">
+                  <div class="form__block">
+                    <label for="product-name" class="form__label">Наименование</label>
+                    <input id="product-name" autocomplete="off" type="text" name="" placeholder="Название товара" class="form__input">
+                  </div>
+                  <div class="form__column">
+                    <label for="product-count" class="form__label">Количество</label>
+                    <input id="product-count" autocomplete="off" type="text" name="" placeholder="Количество товара" class="form__input">
+                  </div>
+                  <div class="form__column">
+                    <label for="event-field" class="form__label">Цена</label>
+                    <input id="product-price" autocomplete="off" type="text" name="" placeholder="Цена" class="form__input">
+                  </div>
+                  <div class="form__block">
+                    <label for="description" class="form__label">Описание</label>
+                    <textarea id="description" autocomplete="off" name="" placeholder="Описание товара" class="form__area"></textarea>
+                  </div>
+                  <div class="form__block">
+                    <div class="form__label form__label--file">Загрузить фото	</div>
+                    <div class="form__thumbs">
+                      <div class="form__files">
+                        <label class="form__file-label"><span class="form__false-file">
+                                <svg class="icon icon-exit ">
+                                  <use xlink:href="img/icons-svg/symbol/sprite.svg#exit"></use>
+                                </svg></span>
+                          <input type="file" name="" placeholder="Загрузить фото" class="form__file">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="modal__bottom">
+                  <button type="button" class="btn modal__action">Редактировать</button>
+                  <div class="modal__message modal__message--success">Товар успешно добавлен</div>
                 </div>
               </main>
             </div>
@@ -347,6 +394,7 @@
     </main>
     
     
+    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
     
     <script src="js/libs/micromodal/micromodal.js"></script>

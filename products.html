@@ -16,7 +16,7 @@
           <div class="header__menu menu-header">
             <nav class="menu-header__body">
               <ul class="header-menu">
-                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
+                <li class="header-menu__item"><a href="#" class="header-menu__link header__item active">
                         <svg class="icon icon-prods ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#prods"></use>
                         </svg><span class="header-menu__span">Товары</span></a></li>
@@ -100,11 +100,33 @@
               </div>
             </div>
           </div>
+          <div class="pagination__wrapper">
+                <div class="pagination">
+                  <button class="pagination__arrow pagination__arrow--prev">Prev
+                        <svg class="icon icon-chev-left ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-left"></use>
+                        </svg>
+                  </button>
+                  <ul class="pagination__list">
+                    <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link active">2</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+                    <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+                  </ul>
+                  <button class="pagination__arrow pagination__arrow--next">Next
+                        <svg class="icon icon-chev-right ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
+                        </svg>
+                  </button>
+                </div>
+          </div>
         </section>
       </div>
     </main>
     
     
+    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
     
     <script src="js/common.js"></script>

@@ -69,7 +69,10 @@
 	&:first-child{
 		.header-menu__link {
 			&.active{
-				border-bottom-color: $orange;
+				@include min-screen($sm){
+					border-bottom-color: $orange;
+				}
+					
 			}
 			@media (any-hover: hover) { //только для устройств с ховером
 
@@ -82,7 +85,10 @@
 	&:nth-child(2){
 		.header-menu__link {
 			&.active{
-				border-bottom-color: #5C9D33;
+				@include min-screen($sm){
+					border-bottom-color: #5C9D33;
+				}
+					
 			}
 			@media (any-hover: hover) { //только для устройств с ховером
 
@@ -95,7 +101,10 @@
 	&:nth-child(3){
 		.header-menu__link {
 			&.active{
-				border-bottom-color: #37B38E;
+				@include min-screen($sm){
+					border-bottom-color: #37B38E;
+				}
+					
 			}
 			@media (any-hover: hover) { //только для устройств с ховером
 
@@ -108,7 +117,10 @@
 	&:nth-child(4){
 		.header-menu__link {
 			&.active{
-				border-bottom-color: #3795B3;
+				@include min-screen($sm){
+					border-bottom-color: #3795B3;
+				}
+					
 			}
 			@media (any-hover: hover) { //только для устройств с ховером
 

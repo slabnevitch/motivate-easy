@@ -275,14 +275,24 @@
                         <div class="modal__title">Снятие Кронов</div>
                       </div>
                       <main class="modal__content">
-                        <form action="#" class="form">
-                          <label for="withdrawal-field" class="form__label">Кроны</label>
-                          <input id="withdrawal-field" autocomplete="off" type="text" name="" placeholder="Количество кронов" class="form__input">
+                        <form action="#" class="form form-columns">
+                          <div class="form__column">
+                            <label for="withdrawal-crons-field" class="form__label">Кроны</label>
+                            <input id="withdrawal-crons-field" autocomplete="off" type="text" name="cron-count" placeholder="Количество кронов" class="form__input">
+                          </div>
+                          <div class="form__column">
+                            <label for="withdrawal-event-field" class="form__label">Событие</label>
+                            <input id="withdrawal-events-field" autocomplete="off" type="text" name="cron-event" placeholder="Событие" class="form__input">
+                          </div>
+                          <div class="form__block">
+                            <label for="withdrawal-description" class="form__label">Описание</label>
+                            <textarea id="withdrawal-description" autocomplete="off" name="cron-descrption" placeholder="Описание товара" class="form__area"></textarea>
+                          </div>
+                          <div class="modal__bottom">
+                            <button type="submit" class="btn btn-red modal__action">сНЯТЬ</button>
+                            <div class="modal__message modal__message--error">Ошибка снятия кронов, баланс уходит в минус</div>
+                          </div>
                         </form>
-                        <div class="modal__bottom">
-                          <button type="button" class="btn modal__action">сНЯТЬ</button>
-                          <div class="modal__message modal__message--error">Ошибка снятия кронов, баланс уходит в минус</div>
-                        </div>
                       </main>
                     </div>
                   </div>
@@ -301,22 +311,22 @@
                       <main class="modal__content">
                         <form action="#" class="form form-columns">
                           <div class="form__column">
-                            <label for="crons-field" class="form__label">Кроны</label>
-                            <input id="crons-field" autocomplete="off" type="text" name="" placeholder="Количество кронов" class="form__input">
+                            <label for="refill-crons-field" class="form__label">Кроны</label>
+                            <input id="refill-crons-field" autocomplete="off" type="text" name="cron-count" placeholder="Количество кронов" class="form__input">
                           </div>
                           <div class="form__column">
-                            <label for="event-field" class="form__label">Событие</label>
-                            <input id="events-field" autocomplete="off" type="text" name="" placeholder="Событие" class="form__input">
+                            <label for="refill-event-field" class="form__label">Событие</label>
+                            <input id="refill-events-field" autocomplete="off" type="text" name="cron-event" placeholder="Событие" class="form__input">
                           </div>
                           <div class="form__block">
-                            <label for="description" class="form__label">Событие</label>
-                            <textarea id="description" autocomplete="off" name="" placeholder="Описание товара" class="form__area"></textarea>
+                            <label for="refill-description" class="form__label">Описание</label>
+                            <textarea id="refill-description" autocomplete="off" name="cron-descrption" placeholder="Описание товара" class="form__area"></textarea>
+                          </div>
+                          <div class="modal__bottom">
+                            <button type="button" class="btn modal__action">ПОПОЛНИТЬ</button>
+                            <div class="modal__message modal__message--success">Баланс кронов успешно пополнен</div>
                           </div>
                         </form>
-                        <div class="modal__bottom">
-                          <button type="button" class="btn modal__action">ПОПОЛНИТЬ</button>
-                          <div class="modal__message modal__message--success">Баланс кронов успешно пополнен</div>
-                        </div>
                       </main>
                     </div>
                   </div>

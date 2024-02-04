@@ -1,8 +1,7 @@
 /*--------------------modals----------------------*/
 .modal {
 	.form{
-		padding: rem(23) rem(24) rem(20) rem(24);
-		margin-bottom: rem(12);
+		padding: rem(23) rem(24) 0 rem(24);
 		margin-left: rem(-24);
 		margin-right: rem(-24);
 		background-color: #F8FAFB;
@@ -19,6 +18,7 @@
 }
 .modal__header {
 	padding-bottom: rem(23);
+	flex-direction: row-reverse;
 }
 .modal__close {
 	position: static;
@@ -51,6 +51,7 @@
 }
 
 .modal__bottom {
+	width: 100%;
 	display: flex;
 	align-items: center;
 	gap: rem(30);

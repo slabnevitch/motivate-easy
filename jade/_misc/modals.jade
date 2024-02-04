@@ -7,14 +7,26 @@ mixin modal-withdrawal()
 						+icon('close')
 					.modal__title Снятие Кронов
 				main.modal__content
-					form(action="#" class="form")
-						label.form__label(for="withdrawal-field") Кроны
-						input(id="withdrawal-field" autocomplete="off" type="text" name="" class="form__input" placeholder="Количество кронов")
+					form(action="#" class="form form-columns")
+						//- label.form__label(for="withdrawal-field") Кроны
+						//- input(id="withdrawal-field" autocomplete="off" type="text" name="kron-count" class="form__input" placeholder="Количество кронов")
 
-					.modal__bottom
-						button(type="button").btn.modal__action сНЯТЬ
-						.modal__message.modal__message--error Ошибка снятия кронов, баланс уходит в минус
-						//- button(type="button").btn.btn-gray.modal__action Отмена
+						.form__column
+							label.form__label(for="withdrawal-crons-field") Кроны
+							input(id="withdrawal-crons-field" autocomplete="off" type="text" name="cron-count" class="form__input" placeholder="Количество кронов")
+
+						.form__column
+							label.form__label(for="withdrawal-event-field") Событие
+							input(id="withdrawal-events-field" autocomplete="off" type="text" name="cron-event" class="form__input" placeholder="Событие")
+
+						.form__block
+							label.form__label(for="withdrawal-description") Описание
+							textarea(id="withdrawal-description" autocomplete="off"  name="cron-descrption" class="form__area" placeholder="Описание товара")
+
+						.modal__bottom
+							button(type="submit").btn.btn-red.modal__action сНЯТЬ
+							.modal__message.modal__message--error Ошибка снятия кронов, баланс уходит в минус
+							//- button(type="button").btn.btn-gray.modal__action Отмена
 
 mixin modal-refill()
 	#modal-refill.modal.micromodal-slide(aria-hidden='true')
@@ -27,21 +39,21 @@ mixin modal-refill()
 				main.modal__content
 					form(action="#" class="form form-columns")
 						.form__column
-							label.form__label(for="crons-field") Кроны
-							input(id="crons-field" autocomplete="off" type="text" name="" class="form__input" placeholder="Количество кронов")
+							label.form__label(for="refill-crons-field") Кроны
+							input(id="refill-crons-field" autocomplete="off" type="text" name="cron-count" class="form__input" placeholder="Количество кронов")
 
 						.form__column
-							label.form__label(for="event-field") Событие
-							input(id="events-field" autocomplete="off" type="text" name="" class="form__input" placeholder="Событие")
+							label.form__label(for="refill-event-field") Событие
+							input(id="refill-events-field" autocomplete="off" type="text" name="cron-event" class="form__input" placeholder="Событие")
 
 						.form__block
-							label.form__label(for="description") Событие
-							textarea(id="description" autocomplete="off"  name="" class="form__area" placeholder="Описание товара")
+							label.form__label(for="refill-description") Описание
+							textarea(id="refill-description" autocomplete="off"  name="cron-descrption" class="form__area" placeholder="Описание товара")
 
-					.modal__bottom
-						button(type="button").btn.modal__action ПОПОЛНИТЬ
-						.modal__message.modal__message--success Баланс кронов успешно пополнен
-						//- button(type="button").btn.btn-gray.modal__action Отмена
+						.modal__bottom
+							button(type="button").btn.modal__action ПОПОЛНИТЬ
+							.modal__message.modal__message--success Баланс кронов успешно пополнен
+							//- button(type="button").btn.btn-gray.modal__action Отмена
 mixin product-create()
 	#product-create.modal.micromodal-slide(aria-hidden='true')
 		.modal__overlay(tabindex='-1' data-micromodal-close)

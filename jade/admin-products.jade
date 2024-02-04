@@ -50,8 +50,10 @@ block content
 									.body-table__label Actions
 									button.body-table__button(type="button" data-micromodal-open="product-edit")
 										+icon('edit')
-									button.body-table__button(type="button")
-										+icon('delete')
+
+									form.body-table__form(action="#")
+										button.body-table__button(type="submit")
+											+icon('delete')
 
 								each col, ind in bodyCols
 									//- if ind > 0

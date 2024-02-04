@@ -138,6 +138,9 @@
 	}
 
 }
+.body-table__form{
+	display: inline-block;
+}
 .body-table__button{
 	@include but-null();
 	margin: 0 rem(10);

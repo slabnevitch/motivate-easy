@@ -140,3 +140,27 @@ mixin product-edit()
 						button(type="button").btn.modal__action Редактировать
 						.modal__message.modal__message--success Товар успешно добавлен
 						//- button(type="button").btn.btn-gray.modal__action Отмена
+
+mixin modal-inform-success()
+	#modal-inform-succes.inform-modal.inform-modal--success.modal.micromodal-slide(aria-hidden='true')
+		.modal__overlay(tabindex='-1' data-micromodal-close)
+			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+				.modal__header
+					button.modal__close(aria-label='Close modal' data-micromodal-close)
+						+icon('close')
+				main.modal__content
+					.inform-modal__content
+						+icon('attention-succes')
+						.inform-modal__message Успешное флеш сообщение
+
+mixin modal-inform-error()
+	#modal-inform-error.inform-modal.inform-modal--error.modal.micromodal-slide(aria-hidden='true')
+		.modal__overlay(tabindex='-1' data-micromodal-close)
+			.modal__container(role='dialog' aria-modal='true' aria-labelledby='modal-1-title')
+				.modal__header
+					button.modal__close(aria-label='Close modal' data-micromodal-close)
+						+icon('close')
+				main.modal__content
+					.inform-modal__content
+						+icon('attention-error')
+						.inform-modal__message Флеш сообшение с ошибкой

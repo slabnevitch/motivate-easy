@@ -6,6 +6,8 @@
 		margin-right: rem(-24);
 		background-color: #F8FAFB;
 	}
+
+
 }
 .micromodal-slide {
 
@@ -85,5 +87,53 @@
 }
 .modal__message--success {
 	color: $green
+}
+
+.inform-modal{
+
+	.modal__header{
+		padding-bottom: 0;
+	}
+	.modal__close{
+		position: absolute;
+		top: rem(10);
+		right: rem(10);
+	}
+	.modal__container{
+		max-width: rem(477);
+		padding-bottom: rem(49);
+		padding-top: rem(42);
+	}
+	&--success{
+		.modal__container{
+			background-color: #D4F8D3;
+		}
+	}
+	&--error{
+		.modal__container{
+			background-color: #FBE7E9;
+		}
+	}
+}
+.inform-modal__content{
+	display: flex;
+	align-items: center;
+	column-gap: rem(46);
+
+	.icon{
+		font-size: rem(62.22);
+	}
+}
+.icon-attention-succes{
+	color: $green;
+}
+.icon-attention-error{
+	color: $red;;
+}
+.inform-modal__message{
+	font-size: rem(20);
+	color: #000;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
 }
 /*--------------------END modals----------------------*/ 

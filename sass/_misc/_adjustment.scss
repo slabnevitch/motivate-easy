@@ -323,5 +323,16 @@ padding-bottom: 52.25%;
 // 		transition: opacity .5s !important;
 // 	}
 // }
-
+#infomodal-success-toggle,
+#infomodal-error-toggle{
+	position: fixed;
+	left: 0;
+	z-index: 100;
+}
+#infomodal-error-toggle{
+	top:20px;
+}
+#infomodal-success-toggle{
+	top: 0;
+}
 /*--------------------END adjustment----------------------*/ 

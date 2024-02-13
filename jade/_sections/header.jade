@@ -1,7 +1,7 @@
 header.header
 	.header__wrapper
 		if page === 'admin'
-			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Участники', icon: 'peoples'}];
+			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Участники', icon: 'peoples'}, {title: 'Заявки товаров', icon: 'list'}];
 		
 			.header__menu.menu-header
 				nav.menu-header__body
@@ -18,8 +18,9 @@ header.header
 					span Выйти
 			button.toggle-mnu
 				span
-		else
-			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}];
+		
+		else if page == 'products'
+			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}, {title: 'Корзина', icon: 'cart', addedClass: '--cart-full'}];
 		
 			.header__menu.menu-header
 				nav.menu-header__body
@@ -27,8 +28,29 @@ header.header
 						each item, i in menu
 							li.header-menu__item
 								a(href="#" class=i==index ? "header-menu__link header__item active" : "header-menu__link header__item")
-									+icon(item.icon)
-									span.header-menu__span= item.title
+									if item.title == 'Корзина'
+										.header-menu__icon.header-menu__icon--cart-full
+											img(src="img/icons-svg/cart.svg")
+										span.header-menu__span= item.title
+									else
+										+icon(item.icon)
+										span.header-menu__span= item.title
+		else if page == 'purchases'
+			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}, {title: 'Корзина', icon: 'cart', addedClass: '--cart-full'}, {title: 'Мои покупки', icon: 'list'}];
+		
+			.header__menu.menu-header
+				nav.menu-header__body
+					ul.header-menu
+						each item, i in menu
+							li.header-menu__item
+								a(href="#" class=i==index ? "header-menu__link header__item active" : "header-menu__link header__item")
+									if item.title == 'Корзина'
+										.header-menu__icon.header-menu__icon--cart-full
+											img(src="img/icons-svg/cart.svg")
+										span.header-menu__span= item.title
+									else
+										+icon(item.icon)
+										span.header-menu__span= item.title
 
 			.header__actions
 				.header__wallet.header__item

@@ -1,75 +1,33 @@
 extends _misc/main
 
 block title
-	| Админ - Редактирование
-	- var page = 'admin';
-	- var index = 1;
+	| Мои покупки
+	- var page = 'purchases';
+	- var index = 5;
+	
 block content
-	.admin-edit
-		.admin-edit__wrapper
-			form.admin-search__form(action="#")
-				+icon('search')
-				label.admin-search__label
-					input(autocomplete="off" id="search-input" type="text" name="search" class="admin-search__input" placeholder="Введите имя участника")
-
-				button.btn.btn-md.admin-search__submit(type="submit") Поиск
-
-				.search-results
-					- for (var i=0; i < 3; i++)
-						.search-results__item Что-то найдено
-			
-			.admin-profile
-				.admin-profile__photo._fit
-					img._fit-img(src="img/user.jpg" alt="alt")
-				
-				.admin-profile__info
-					- let items = [{key: 'Имя', val: 'Tomiwa Oyeledu Dolapo'}, {key: 'Баланс', val: '1367'}, {key: 'Дата последней активности', val: 'Август 27th, 2023'}, {key: 'Количество активностей', val: '11'}];
-					
-					.admin-profile__column
-						each item, i in items
-							if i < items.length - 1
-								.admin-profile__item
-									.admin-profile__key= item.key
-									.admin-profile__val= item.val
-					
-					.admin-profile__column
-						each item, i in items
-							if i > items.length - 2
-								.admin-profile__item
-									.admin-profile__key= item.key
-									.admin-profile__val= item.val
-
-					.admin-profile__actions
-						button.btn.btn-sm.admin-profile__button(data-micromodal-open="modal-refill")
-							+icon('plus')
-							| Пополнить Кроны
-
-						button.btn.btn-sm.btn-red.admin-profile__button(data-micromodal-open="modal-withdrawal")
-							+icon('minus')
-							| Снять Кроны
+	.purchases
+		.purchases__wrapper
 
 			.admin-edit__table
 				.table
 					.table__header.header-table
-						- let headerCols = ['Событие', 'Транзакция', 'Описание', 'Дата'];
+						- let headerCols = ['Действие', 'Наименование', 'Цена', 'Статус', 'Количество', 'Дата'];
 						.header-table__row
 							each col in headerCols
 								.header-table__column= col
 					
-					.table__body.body-table
-						- let bodyCols = ['Участие в вебинаре', '+100', 'Участиве в вебинаре “Раз Участиве в вебинаре “Раз', '19/09/2022'];
-						- for (var i=0; i < 8; i++)
-							.body-table__row
-								each col, ind in bodyCols
-									.body-table__column
-										.body-table__label= headerCols[ind]
-										.body-table__val= col
+					// .table__body.body-table
+					// 	- let bodyCols = [['Отменить', 'Ручка', '55', 'Собирается'];
+					// 	- for (var i=0; i < 8; i++)
+					// 		.body-table__row
+					// 			each col, ind in bodyCols
+					// 				.body-table__column
+					// 					.body-table__label= headerCols[ind]
+					// 					.body-table__val= col
 
 			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
 
-	include _misc/modals
-	+modal-withdrawal()
-	+modal-refill()
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
@@ -204,7 +162,7 @@ block page-scripts
 	//- script(src="js/libs/simplebar/simplebar.min.js")
 		
 	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
-	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+	script(src="js/libs/fstdropdown/fstdropdown.min.js")
 
 	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
 	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")

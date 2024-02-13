@@ -1,75 +1,34 @@
 extends _misc/main
 
 block title
-	| Админ - Редактирование
+	| Админ - Заявки товаров
 	- var page = 'admin';
-	- var index = 1;
+	- var index = 2;
 block content
-	.admin-edit
-		.admin-edit__wrapper
-			form.admin-search__form(action="#")
-				+icon('search')
-				label.admin-search__label
-					input(autocomplete="off" id="search-input" type="text" name="search" class="admin-search__input" placeholder="Введите имя участника")
-
-				button.btn.btn-md.admin-search__submit(type="submit") Поиск
-
-				.search-results
-					- for (var i=0; i < 3; i++)
-						.search-results__item Что-то найдено
-			
-			.admin-profile
-				.admin-profile__photo._fit
-					img._fit-img(src="img/user.jpg" alt="alt")
+	.__wrapper
+		.admin-search__table
+			.table
+				.table__header.header-table
+					- let headerCols = ['Имя', 'Наименование', 'Цена', 'Действие', 'Статус', 'Дата'];
+					.header-table__row
+						each col in headerCols
+							.header-table__column= col
 				
-				.admin-profile__info
-					- let items = [{key: 'Имя', val: 'Tomiwa Oyeledu Dolapo'}, {key: 'Баланс', val: '1367'}, {key: 'Дата последней активности', val: 'Август 27th, 2023'}, {key: 'Количество активностей', val: '11'}];
-					
-					.admin-profile__column
-						each item, i in items
-							if i < items.length - 1
-								.admin-profile__item
-									.admin-profile__key= item.key
-									.admin-profile__val= item.val
-					
-					.admin-profile__column
-						each item, i in items
-							if i > items.length - 2
-								.admin-profile__item
-									.admin-profile__key= item.key
-									.admin-profile__val= item.val
+				.table__body.body-table
+					- let bodyCols = ['Иванов Иван Иванович', 'Ручка', '55', '19/09/2022'];
+					- for (var i=0; i < 8; i++)
+						.body-table__row
+							each col, ind in bodyCols
+								.body-table__column
+									.body-table__label= headerCols[ind]
+									if ind == 0
 
-					.admin-profile__actions
-						button.btn.btn-sm.admin-profile__button(data-micromodal-open="modal-refill")
-							+icon('plus')
-							| Пополнить Кроны
-
-						button.btn.btn-sm.btn-red.admin-profile__button(data-micromodal-open="modal-withdrawal")
-							+icon('minus')
-							| Снять Кроны
-
-			.admin-edit__table
-				.table
-					.table__header.header-table
-						- let headerCols = ['Событие', 'Транзакция', 'Описание', 'Дата'];
-						.header-table__row
-							each col in headerCols
-								.header-table__column= col
-					
-					.table__body.body-table
-						- let bodyCols = ['Участие в вебинаре', '+100', 'Участиве в вебинаре “Раз Участиве в вебинаре “Раз', '19/09/2022'];
-						- for (var i=0; i < 8; i++)
-							.body-table__row
-								each col, ind in bodyCols
-									.body-table__column
-										.body-table__label= headerCols[ind]
+										a(href="admin-edit.html").body-table__val= col
+									else
 										.body-table__val= col
 
-			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
+		+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
 
-	include _misc/modals
-	+modal-withdrawal()
-	+modal-refill()
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
 
@@ -162,7 +121,7 @@ block page-scripts
 	//- script(src="js/libs/tabs-accordion-combine/tabs-accordion.js")
 		
 	//- micromodal--------------------------
-	//- script(src="js/libs/micromodal/micromodal.js")
+	//- script(src="js/libs/micromodal/micromodal.js")	
 		
 	//- swiper--------------------------
 	//- script(src="js/libs/swiper/swiper-bundle.min.js")

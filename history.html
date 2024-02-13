@@ -10,42 +10,11 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <button id="infomodal-success-toggle" type="button">Infomodal success</button>
+    <button id="infomodal-error-toggle" type="button">Infomodal error</button>
     <main class="main">
       <header class="header">
         <div class="header__wrapper">
-          <div class="header__menu menu-header">
-            <nav class="menu-header__body">
-              <ul class="header-menu">
-                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
-                        <svg class="icon icon-prods ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#prods"></use>
-                        </svg><span class="header-menu__span">Товары</span></a></li>
-                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
-                        <svg class="icon icon-events ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#events"></use>
-                        </svg><span class="header-menu__span">Мероприятия</span></a></li>
-                <li class="header-menu__item"><a href="#" class="header-menu__link header__item active">
-                        <svg class="icon icon-history ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#history"></use>
-                        </svg><span class="header-menu__span">Моя истoрия</span></a></li>
-                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
-                        <svg class="icon icon-handler ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#handler"></use>
-                        </svg><span class="header-menu__span">Управление</span></a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="header__actions">
-            <div class="header__wallet header__item">
-                  <svg class="icon icon-wallet ">
-                    <use xlink:href="img/icons-svg/symbol/sprite.svg#wallet"></use>
-                  </svg><span>24452</span>
-            </div><a href="#" class="header__user header__item">
-                  <svg class="icon icon-exit ">
-                    <use xlink:href="img/icons-svg/symbol/sprite.svg#exit"></use>
-                  </svg><span>Выйти</span></a>
-          </div>
-          <button class="toggle-mnu"><span></span></button>
         </div>
       </header>
       <div class="main-content">
@@ -228,12 +197,54 @@
         </div>
       </div>
     </main>
-    
-    
-    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+        <div id="modal-inform-succes" aria-hidden="true" class="inform-modal inform-modal--success modal micromodal-slide">
+          <div tabindex="-1" data-micromodal-close class="modal__overlay">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal__container">
+              <div class="modal__header">
+                <button aria-label="Close modal" data-micromodal-close class="modal__close">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                      </svg>
+                </button>
+              </div>
+              <main class="modal__content">
+                <div class="inform-modal__content">
+                      <svg class="icon icon-attention-succes ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#attention-succes"></use>
+                      </svg>
+                  <div class="inform-modal__message">Успешное флеш сообщение</div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+        <div id="modal-inform-error" aria-hidden="true" class="inform-modal inform-modal--error modal micromodal-slide">
+          <div tabindex="-1" data-micromodal-close class="modal__overlay">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal__container">
+              <div class="modal__header">
+                <button aria-label="Close modal" data-micromodal-close class="modal__close">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                      </svg>
+                </button>
+              </div>
+              <main class="modal__content">
+                <div class="inform-modal__content">
+                      <svg class="icon icon-attention-error ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#attention-error"></use>
+                      </svg>
+                  <div class="inform-modal__message">Флеш сообшение с ошибкой</div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
     
     
     <script src="js/libs/micromodal/micromodal.js"></script>
+    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+    
+    
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
     <script src="js/common.js"></script>
   </body>

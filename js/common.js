@@ -79,14 +79,19 @@
 	// }
 	// End ibg class
 
-	document.querySelector('.toggle-mnu').onclick = function(e) {
-		this.classList.toggle('on');
-		document.documentElement.classList.toggle('menu-opened');
-		document.documentElement.classList.toggle('lock');
-	}
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+
+
+
+		// открытие/закрытие моб. меню
+		document.querySelector('.toggle-mnu').onclick = function(e) {
+			this.classList.toggle('on');
+			document.documentElement.classList.toggle('menu-opened');
+			document.documentElement.classList.toggle('lock');
+		}
+		//END открытие/закрытие моб. меню
 		
 		//serch-results toggle 
 		if(document.querySelector('.admin-search__form') !== null){
@@ -128,7 +133,8 @@
 
 	}
 	//END добавление value в модалку редактирования товара
-	
+
+	// micromodal
 	if(document.querySelector('.modal') !== null){
 		MicroModal.init({
 			openTrigger: 'data-micromodal-open', 
@@ -148,6 +154,16 @@
 				// document.querySelector('#wrapper-for-scroll-fix').classList.remove('modal-open');
 			}
 		});		
+	
+		// показ/скрытие инфомодалок
+		document.getElementById('infomodal-success-toggle').onclick = function() {
+			MicroModal.show('modal-inform-succes');
+		}
+		document.getElementById('infomodal-error-toggle').onclick = function() {
+			MicroModal.show('modal-inform-error');
+		}
+
+		//END показ/скрытие инфомодалок
 	}
 	// END micromodal
 	});

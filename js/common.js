@@ -105,7 +105,30 @@
 
 		// micromodal
 
+	// добавление value в модалку редактирования товара
+	if(document.querySelector('[data-micromodal-open="product-edit"]') !== null){
+		Array.prototype.slice.call(document.querySelectorAll('[data-micromodal-open="product-edit"]')).forEach(function(button) {
+			button.onclick = function(e) {
+				console.log(e.target);
+				var row = this.closest('.body-table__row'),
+					fields = row.querySelectorAll('[data-field]'),
+					targetModal = document.getElementById('product-edit'),
+					inputs = targetModal.querySelectorAll('form .form__input');
 
+				Array.prototype.slice.call(fields).forEach(function(field, i) {
+					Array.prototype.slice.call(inputs).forEach(function(input, i) {
+
+						if(field.dataset.field === input.name){
+							input.value = field.textContent;
+						}
+					});
+				});
+			}
+		});
+
+	}
+	//END добавление value в модалку редактирования товара
+	
 	if(document.querySelector('.modal') !== null){
 		MicroModal.init({
 			openTrigger: 'data-micromodal-open', 

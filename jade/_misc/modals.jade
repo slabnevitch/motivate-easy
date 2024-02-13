@@ -65,21 +65,21 @@ mixin product-create()
 				main.modal__content
 					form(action="#" class="form form-columns")
 						.form__block
-							label.form__label(for="product-name") Наименование
-							input(id="product-name" autocomplete="off" type="text" name="" class="form__input" placeholder="Название товара")
+							label.form__label(for="product-create-name") Наименование
+							input(id="product-create-name" autocomplete="off" type="text" name="product-create-name" class="form__input" placeholder="Название товара")
 							
 							//- label.form__label(for="description") Событие
 							//- textarea(id="description" autocomplete="off"  name="" class="form__area" placeholder="Описание товара")
 						.form__column
-							label.form__label(for="product-count") Количество
-							input(id="product-count" autocomplete="off" type="text" name="" class="form__input" placeholder="Количество товара")
+							label.form__label(for="product-create-count") Количество
+							input(id="product-create-count" autocomplete="off" type="text" name="product-create-count" class="form__input" placeholder="Количество товара")
 						.form__column
 							label.form__label(for="event-field") Цена
-							input(id="product-price" autocomplete="off" type="text" name="" class="form__input" placeholder="Цена")
+							input(id="product-create-price" autocomplete="off" type="text" name="product-create-price" class="form__input" placeholder="Цена")
 
 						.form__block
-							label.form__label(for="description") Описание
-							textarea(id="description" autocomplete="off"  name="" class="form__area" placeholder="Описание товара")
+							label.form__label(for="product-create-description") Описание
+							textarea(id="product-create-description" autocomplete="off"  name="product-create-description" class="form__area" placeholder="Описание товара")
 
 						.form__block
 							.form__label.form__label--file Загрузить фото	
@@ -108,21 +108,21 @@ mixin product-edit()
 				main.modal__content
 					form(action="#" class="form form-columns")
 						.form__block
-							label.form__label(for="product-name") Наименование
-							input(id="product-name" autocomplete="off" type="text" name="" class="form__input" placeholder="Название товара")
+							label.form__label(for="product-edit-name") Наименование
+							input(id="product-edit-name" autocomplete="off" type="text" name="product-edit-name" class="form__input" placeholder="Название товара")
 							
 							//- label.form__label(for="description") Событие
 							//- textarea(id="description" autocomplete="off"  name="" class="form__area" placeholder="Описание товара")
 						.form__column
-							label.form__label(for="product-count") Количество
-							input(id="product-count" autocomplete="off" type="text" name="" class="form__input" placeholder="Количество товара")
+							label.form__label(for="product-edit-count") Количество
+							input(id="product-edit-count" autocomplete="off" type="text" name="product-edit-count" class="form__input" placeholder="Количество товара")
 						.form__column
-							label.form__label(for="event-field") Цена
-							input(id="product-price" autocomplete="off" type="text" name="" class="form__input" placeholder="Цена")
+							label.form__label(for="product-edit-price") Цена
+							input(id="product-edit-price" autocomplete="off" type="text" name="product-edit-price" class="form__input" placeholder="Цена")
 
 						.form__block
-							label.form__label(for="description") Описание
-							textarea(id="description" autocomplete="off"  name="" class="form__area" placeholder="Описание товара")
+							label.form__label(for="product-edit-description") Описание
+							textarea(id="product-edit-description" autocomplete="off"  name="product-edit-description" class="form__area" placeholder="Описание товара")
 
 						.form__block
 							.form__label.form__label--file Загрузить фото	

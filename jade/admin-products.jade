@@ -43,7 +43,7 @@ block content
 								.header-table__column= col
 					
 					.table__body.body-table
-						- let bodyCols = ['Ручка', '1500', 'Активна', '21', '19/09/2022'];
+						- let bodyCols = [{name: 'Ручка', label: 'edit-name'}, {name:'1500', label:'edit-price'}, {name:'Активна'}, {name: '21', label: 'edit-count'}, {name: '19/09/2022'}];
 						- for (var i=0; i < 9; i++)
 							.body-table__row
 								.body-table__column
@@ -59,7 +59,7 @@ block content
 									//- if ind > 0
 									.body-table__column
 										.body-table__label= headerCols[ind + 1]
-										.body-table__val= col
+										.body-table__val(data-field=col.label ? 'product-'+col.label : false)= col.name
 
 			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
 

@@ -44,8 +44,8 @@
 }
 .menu-header__body {
 
-	@include menu-mob($sm);
-	@include max-screen($sm){
+	@include menu-mob(em($maxWidthContainer + 150));
+	@include max-screen(em($maxWidthContainer + 150)){
 		background-color: #fff;
 	}
 
@@ -55,11 +55,11 @@
 	display: flex;
 	flex-wrap: wrap;
 
-	@include min-screen($sm){
+	@include min-screen(em($maxWidthContainer + 150)){
 		align-items: center;
 		
 	}
-	@include max-screen($sm){
+	@include max-screen(em($maxWidthContainer + 150)){
 		flex-direction: column;
 		padding-top: rem(54);
 	}
@@ -206,9 +206,10 @@
 			top: rem(-12);
 			width: rem(6);
 			height: rem(6);
-			margin-left: rem(6);
+			margin-left: rem(7);
 			border-radius: 50%;
 			background-color: #FF453A;
+			z-index: 1;
 		}
 
 	}

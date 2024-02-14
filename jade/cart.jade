@@ -1,42 +1,63 @@
 extends _misc/main
 
 block title
-	| Мои покупки
-	- var page = 'purchases';
-	- var index = 5;
+	| Корзина
+	- var page = 'cart';
+	- var index = 4;
 	
 block content
-	.purchases
-		.purchases__wrapper
-
-			.purchases__table
-				.table
-					.table__header.header-table
-						- let headerCols = ['Действие', 'Наименование', 'Цена', 'Статус', 'Количество', 'Дата'];
-						.header-table__row
-							each col in headerCols
-								.header-table__column= col
-					
-					.table__body.body-table
-						- let bodyCols = [['true', 'Ручка', '55', 'Собирается', '1', '19/09/2022'], ['', 'Стакан', '55', 'Получена', '1', '07/12/2023'], ['true', 'Чехол', '55', 'Можно забирать', '1', '11/08/2022'], ['', 'Часы', '55', 'Отменена', '1', '29/07/2023'], ['true', 'Ручка', '55', 'Собирается', '1', '19/09/2022'], ['', 'Стакан', '55', 'Получена', '1', '07/12/2023'], ['true', 'Чехол', '55', 'Можно забирать', '1', '11/08/2022'],  ['', 'Часы', '55', 'Отменена', '1', '29/07/2023'],  ['', 'Часы', '55', 'Отменена', '1', '29/07/2023']];
-				
-						each col in bodyCols
-							.body-table__row
-								each item, ind in col
-									.body-table__column
-										.body-table__label= headerCols[ind]
-										if item == 'true'
+	.cart
+		.cart__wrapper
+			.cart__content
+				.cart__table
+					.table
+						.table__header.header-table
+							- let headerCols = ['Действие', 'Наименование', 'Цена', 'Количество'];
+							.header-table__row
+								each col in headerCols
+									.header-table__column= col
+						
+						.table__body.body-table
+							- for (var i=0; i <9 ; i++)
+								.body-table__row
+										.body-table__column
+											.body-table__label Действие
 											.body-table__val
-													button.body-table__abort(type="button")
-														+icon('close')
-														| Отменить
-										else if item
-											if ind == 3
-												div(class=col[ind] == 'Собирается' ? "purchase-status purchase-status--complect" : col[ind] == 'Получена' ? "purchase-status purchase-status--received" : col[ind] == 'Можно забирать' ? "purchase-status purchase-status--ready" : col[ind] == 'Отменена' ? "purchase-status purchase-status--abort" : "")= col[ind]
-											else
-												.body-table__val= col[ind]
+												form.body-table__form(action="#")
+													button.body-table__button(type="submit")
+														+icon('delete')
+
+										.body-table__column
+											.body-table__label Наименование
+											.body-table__val Ручка
+										.body-table__column
+											.body-table__label Цена
+											.body-table__val 55
+										.body-table__column
+											.body-table__label Количество
+											.body-table__val
+												.counter(data-min="0" data-max="100")
+													span.counter__button.counter-minus
+														+icon('counter-down')
+													.counter__block
+														input(autocomplete="off" type="hidden" name="name" value="1" )
+														.counter__count 1
+													span.counter__button.counter-plus
+														+icon('counter-up')
+
+				
+				.cart__info.info-cart
+					.info-cart__title Покупка
+					.info-cart__table
+						.info-cart__key Итог
+						.info-cart__val 24452
+						.info-cart__key Остаток после оплаты
+						.info-cart__val 13894
+					
+					.info-cart__bottom
+						button.info-cart__button(type="button") ОПЛАТИТЬ
 			
-			+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
+			// +pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
 
 block page-scripts
 	//- SERVIVE FUNCTIONS==================
@@ -181,6 +202,6 @@ block page-scripts
 	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
 
 	//- counter--------------------------
-	//- script(src="js/libs/counter/counter.js")
+	script(src="js/libs/counter/counter.js")
 
 //- end VANILLA JS===================================

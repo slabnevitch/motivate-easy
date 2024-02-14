@@ -59,7 +59,7 @@
       <div class="main-content">
         <div class="purchases">
           <div class="purchases__wrapper">
-            <div class="admin-edit__table">
+            <div class="purchases__table">
               <div class="table">
                 <div class="table__header header-table">
                   <div class="header-table__row">
@@ -71,14 +71,261 @@
                     <div class="header-table__column">Дата</div>
                   </div>
                 </div>
-                <!-- .table__body.body-table-->
-                <!-- 	- let bodyCols = [['Отменить', 'Ручка', '55', 'Собирается'];-->
-                <!-- 	- for (var i=0; i < 8; i++)-->
-                <!-- 		.body-table__row-->
-                <!-- 			each col, ind in bodyCols-->
-                <!-- 				.body-table__column-->
-                <!-- 					.body-table__label= headerCols[ind]-->
-                <!-- 					.body-table__val= col-->
+                <div class="table__body body-table">
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                      <div class="body-table__val">
+                        <button type="button" class="body-table__abort">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                              </svg>Отменить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Ручка</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--complect">Собирается</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">19/09/2022</div>
+                    </div>
+                  </div>
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Стакан</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--received">Получена</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">07/12/2023</div>
+                    </div>
+                  </div>
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                      <div class="body-table__val">
+                        <button type="button" class="body-table__abort">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                              </svg>Отменить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Чехол</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--ready">Можно забирать</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">11/08/2022</div>
+                    </div>
+                  </div>
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Часы</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--abort">Отменена</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">29/07/2023</div>
+                    </div>
+                  </div>
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                      <div class="body-table__val">
+                        <button type="button" class="body-table__abort">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                              </svg>Отменить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Ручка</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--complect">Собирается</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">19/09/2022</div>
+                    </div>
+                  </div>
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Стакан</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--received">Получена</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">07/12/2023</div>
+                    </div>
+                  </div>
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                      <div class="body-table__val">
+                        <button type="button" class="body-table__abort">
+                              <svg class="icon icon-close ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                              </svg>Отменить
+                        </button>
+                      </div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Чехол</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--ready">Можно забирать</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">11/08/2022</div>
+                    </div>
+                  </div>
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Часы</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--abort">Отменена</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">29/07/2023</div>
+                    </div>
+                  </div>
+                  <div class="body-table__row">
+                    <div class="body-table__column">
+                      <div class="body-table__label">Действие</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Наименование</div>
+                      <div class="body-table__val">Часы</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Цена</div>
+                      <div class="body-table__val">55</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Статус</div>
+                      <div class="purchase-status purchase-status--abort">Отменена</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Количество</div>
+                      <div class="body-table__val">1</div>
+                    </div>
+                    <div class="body-table__column">
+                      <div class="body-table__label">Дата</div>
+                      <div class="body-table__val">29/07/2023</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
                 <div class="pagination"><a href="#" class="pagination__arrow pagination__arrow--prev">Prev

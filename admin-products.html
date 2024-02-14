@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <button id="infomodal-success-toggle" type="button">Infomodal success</button>
+    <button id="infomodal-error-toggle" type="button">Infomodal error</button>
     <main class="main">
       <header class="header">
         <div class="header__wrapper">
@@ -24,6 +26,10 @@
                         <svg class="icon icon-peoples ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#peoples"></use>
                         </svg><span class="header-menu__span">Участники</span></a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
+                        <svg class="icon icon-list ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#list"></use>
+                        </svg><span class="header-menu__span">Заявки товаров</span></a></li>
               </ul>
             </nav>
           </div>
@@ -95,19 +101,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -115,7 +123,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -130,19 +138,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -150,7 +160,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -165,19 +175,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -185,7 +197,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -200,19 +212,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -220,7 +234,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -235,19 +249,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -255,7 +271,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -270,19 +286,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -290,7 +308,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -305,19 +323,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -325,7 +345,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -340,19 +360,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -360,7 +382,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -375,19 +397,21 @@
                               <use xlink:href="img/icons-svg/symbol/sprite.svg#edit"></use>
                             </svg>
                       </button>
-                      <button type="button" class="body-table__button">
-                            <svg class="icon icon-delete ">
-                              <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
-                            </svg>
-                      </button>
+                      <form action="#" class="body-table__form">
+                        <button type="submit" class="body-table__button">
+                              <svg class="icon icon-delete ">
+                                <use xlink:href="img/icons-svg/symbol/sprite.svg#delete"></use>
+                              </svg>
+                        </button>
+                      </form>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Наименование</div>
-                      <div class="body-table__val">Ручка</div>
+                      <div data-field="product-edit-name" class="body-table__val">Ручка</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Цена</div>
-                      <div class="body-table__val">1500</div>
+                      <div data-field="product-edit-price" class="body-table__val">1500</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Статус</div>
@@ -395,7 +419,7 @@
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Количество</div>
-                      <div class="body-table__val">21</div>
+                      <div data-field="product-edit-count" class="body-table__val">21</div>
                     </div>
                     <div class="body-table__column">
                       <div class="body-table__label">Дата создания</div>
@@ -436,20 +460,20 @@
                       <main class="modal__content">
                         <form action="#" class="form form-columns">
                           <div class="form__block">
-                            <label for="product-name" class="form__label">Наименование</label>
-                            <input id="product-name" autocomplete="off" type="text" name="" placeholder="Название товара" class="form__input">
+                            <label for="product-edit-name" class="form__label">Наименование</label>
+                            <input id="product-edit-name" autocomplete="off" type="text" name="product-edit-name" placeholder="Название товара" class="form__input">
                           </div>
                           <div class="form__column">
-                            <label for="product-count" class="form__label">Количество</label>
-                            <input id="product-count" autocomplete="off" type="text" name="" placeholder="Количество товара" class="form__input">
+                            <label for="product-edit-count" class="form__label">Количество</label>
+                            <input id="product-edit-count" autocomplete="off" type="text" name="product-edit-count" placeholder="Количество товара" class="form__input">
                           </div>
                           <div class="form__column">
-                            <label for="event-field" class="form__label">Цена</label>
-                            <input id="product-price" autocomplete="off" type="text" name="" placeholder="Цена" class="form__input">
+                            <label for="product-edit-price" class="form__label">Цена</label>
+                            <input id="product-edit-price" autocomplete="off" type="text" name="product-edit-price" placeholder="Цена" class="form__input">
                           </div>
                           <div class="form__block">
-                            <label for="description" class="form__label">Описание</label>
-                            <textarea id="description" autocomplete="off" name="" placeholder="Описание товара" class="form__area"></textarea>
+                            <label for="product-edit-description" class="form__label">Описание</label>
+                            <textarea id="product-edit-description" autocomplete="off" name="product-edit-description" placeholder="Описание товара" class="form__area"></textarea>
                           </div>
                           <div class="form__block">
                             <div class="form__label form__label--file">Загрузить фото	</div>
@@ -487,20 +511,20 @@
                       <main class="modal__content">
                         <form action="#" class="form form-columns">
                           <div class="form__block">
-                            <label for="product-name" class="form__label">Наименование</label>
-                            <input id="product-name" autocomplete="off" type="text" name="" placeholder="Название товара" class="form__input">
+                            <label for="product-create-name" class="form__label">Наименование</label>
+                            <input id="product-create-name" autocomplete="off" type="text" name="product-create-name" placeholder="Название товара" class="form__input">
                           </div>
                           <div class="form__column">
-                            <label for="product-count" class="form__label">Количество</label>
-                            <input id="product-count" autocomplete="off" type="text" name="" placeholder="Количество товара" class="form__input">
+                            <label for="product-create-count" class="form__label">Количество</label>
+                            <input id="product-create-count" autocomplete="off" type="text" name="product-create-count" placeholder="Количество товара" class="form__input">
                           </div>
                           <div class="form__column">
                             <label for="event-field" class="form__label">Цена</label>
-                            <input id="product-price" autocomplete="off" type="text" name="" placeholder="Цена" class="form__input">
+                            <input id="product-create-price" autocomplete="off" type="text" name="product-create-price" placeholder="Цена" class="form__input">
                           </div>
                           <div class="form__block">
-                            <label for="description" class="form__label">Описание</label>
-                            <textarea id="description" autocomplete="off" name="" placeholder="Описание товара" class="form__area"></textarea>
+                            <label for="product-create-description" class="form__label">Описание</label>
+                            <textarea id="product-create-description" autocomplete="off" name="product-create-description" placeholder="Описание товара" class="form__area"></textarea>
                           </div>
                           <div class="form__block">
                             <div class="form__label form__label--file">Загрузить фото	</div>
@@ -526,12 +550,54 @@
                 </div>
       </div>
     </main>
-    
-    
-    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+        <div id="modal-inform-succes" aria-hidden="true" class="inform-modal inform-modal--success modal micromodal-slide">
+          <div tabindex="-1" data-micromodal-close class="modal__overlay">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal__container">
+              <div class="modal__header">
+                <button aria-label="Close modal" data-micromodal-close class="modal__close">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                      </svg>
+                </button>
+              </div>
+              <main class="modal__content">
+                <div class="inform-modal__content">
+                      <svg class="icon icon-attention-succes ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#attention-succes"></use>
+                      </svg>
+                  <div class="inform-modal__message">Успешное флеш сообщение</div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
+        <div id="modal-inform-error" aria-hidden="true" class="inform-modal inform-modal--error modal micromodal-slide">
+          <div tabindex="-1" data-micromodal-close class="modal__overlay">
+            <div role="dialog" aria-modal="true" aria-labelledby="modal-1-title" class="modal__container">
+              <div class="modal__header">
+                <button aria-label="Close modal" data-micromodal-close class="modal__close">
+                      <svg class="icon icon-close ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#close"></use>
+                      </svg>
+                </button>
+              </div>
+              <main class="modal__content">
+                <div class="inform-modal__content">
+                      <svg class="icon icon-attention-error ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#attention-error"></use>
+                      </svg>
+                  <div class="inform-modal__message">Флеш сообшение с ошибкой</div>
+                </div>
+              </main>
+            </div>
+          </div>
+        </div>
     
     
     <script src="js/libs/micromodal/micromodal.js"></script>
+    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+    
+    
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
     <script src="js/common.js"></script>
   </body>

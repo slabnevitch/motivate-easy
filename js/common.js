@@ -79,14 +79,19 @@
 	// }
 	// End ibg class
 
-	document.querySelector('.toggle-mnu').onclick = function(e) {
-		this.classList.toggle('on');
-		document.documentElement.classList.toggle('menu-opened');
-		document.documentElement.classList.toggle('lock');
-	}
 
 	document.addEventListener('DOMContentLoaded', function() {
 		console.log('DOMContentLoaded!');
+
+
+
+		// открытие/закрытие моб. меню
+		document.querySelector('.toggle-mnu').onclick = function(e) {
+			this.classList.toggle('on');
+			document.documentElement.classList.toggle('menu-opened');
+			document.documentElement.classList.toggle('lock');
+		}
+		//END открытие/закрытие моб. меню
 		
 		//serch-results toggle 
 		if(document.querySelector('.admin-search__form') !== null){
@@ -105,7 +110,31 @@
 
 		// micromodal
 
+	// добавление value в модалку редактирования товара
+	if(document.querySelector('[data-micromodal-open="product-edit"]') !== null){
+		Array.prototype.slice.call(document.querySelectorAll('[data-micromodal-open="product-edit"]')).forEach(function(button) {
+			button.onclick = function(e) {
+				console.log(e.target);
+				var row = this.closest('.body-table__row'),
+					fields = row.querySelectorAll('[data-field]'),
+					targetModal = document.getElementById('product-edit'),
+					inputs = targetModal.querySelectorAll('form .form__input');
 
+				Array.prototype.slice.call(fields).forEach(function(field, i) {
+					Array.prototype.slice.call(inputs).forEach(function(input, i) {
+
+						if(field.dataset.field === input.name){
+							input.value = field.textContent;
+						}
+					});
+				});
+			}
+		});
+
+	}
+	//END добавление value в модалку редактирования товара
+
+	// micromodal
 	if(document.querySelector('.modal') !== null){
 		MicroModal.init({
 			openTrigger: 'data-micromodal-open', 
@@ -125,6 +154,18 @@
 				// document.querySelector('#wrapper-for-scroll-fix').classList.remove('modal-open');
 			}
 		});		
+	
+		// показ/скрытие инфомодалок
+		document.getElementById('infomodal-success-toggle').onclick = function() {
+			MicroModal.show('modal-inform-succes');
+			// MicroModal.close('modal-inform-error');
+		}
+		document.getElementById('infomodal-error-toggle').onclick = function() {
+			MicroModal.show('modal-inform-error');
+			// MicroModal.close('modal-inform-succes');
+		}
+
+		//END показ/скрытие инфомодалок
 	}
 	// END micromodal
 	});

@@ -6,26 +6,39 @@ block title
 	- var index = 2;
 block content
 	.__wrapper
-		.admin-search__table
-			.table
-				.table__header.header-table
-					- let headerCols = ['Имя', 'Наименование', 'Цена', 'Действие', 'Статус', 'Дата'];
-					.header-table__row
-						each col in headerCols
-							.header-table__column= col
+		.admin-product-request__table
+				.table
+					.table__header.header-table
+						- let headerCols = ['Имя', 'Наименование', 'Цена', 'Действие', 'Статус', 'Дата'];
+						.header-table__row
+							each col in headerCols
+								.header-table__column= col
+					
+					.table__body.body-table
+						- let bodyCols = [[['Можно забирать', 'Отмена'], 'Собирается'], [['Выдана', 'Отмена'], 'Можно забирать'], [[], 'Выдана'], [[], 'Отменена'], [['Можно забирать', 'Отмена'], 'Собирается'], [['Выдана', 'Отмена'], 'Можно забирать'], [[], 'Выдана'], [[], 'Отменена'], [[], 'Отменена']];
 				
-				.table__body.body-table
-					- let bodyCols = ['Иванов Иван Иванович', 'Ручка', '55', '19/09/2022'];
-					- for (var i=0; i < 8; i++)
-						.body-table__row
-							each col, ind in bodyCols
+						each col in bodyCols
+							.body-table__row
+								.body-table__column 
+									.body-table__label= headerCols[0]
+									.body-table__val Иванов Иван Иванович
+								.body-table__column 
+									.body-table__label= headerCols[1]
+									.body-table__val Ручка
+								.body-table__column 
+									.body-table__label= headerCols[2]
+									.body-table__val 55
 								.body-table__column
-									.body-table__label= headerCols[ind]
-									if ind == 0
-
-										a(href="admin-edit.html").body-table__val= col
-									else
-										.body-table__val= col
+									.body-table__label= headerCols[3]
+									if col[0].length
+										each text in col[0]
+											div(class=text == 'Выдана' ? "purchase-status purchase-status--received" : text == 'Можно забирать' ? "purchase-status purchase-status--complect" : text == 'Отмена' ? "purchase-status purchase-status--abort" : "")= text
+								.body-table__column 
+									.body-table__label= headerCols[4]
+									.body-table__val= col[1]
+								.body-table__column 
+									.body-table__label= headerCols[5]
+									.body-table__val 19/09/2022
 
 		+pagination([1, 2, 3, 4, 5], '', 'chev-left', 'chev-right')
 

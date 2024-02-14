@@ -20,7 +20,7 @@ header.header
 				span
 		
 		else if page == 'products'
-			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}, {title: 'Корзина', icon: 'cart', addedClass: '--cart-full'}];
+			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Корзина', icon: 'cart'}, {title: 'Мои покупки', icon: 'list'}];
 		
 			.header__menu.menu-header
 				nav.menu-header__body
@@ -35,8 +35,45 @@ header.header
 									else
 										+icon(item.icon)
 										span.header-menu__span= item.title
-		else if page == 'purchases'
+			.header__actions
+				.header__wallet.header__item
+					+icon('wallet')
+					span 24452
+				a(href="#").header__user.header__item
+					+icon('exit')
+					span Выйти
+			button.toggle-mnu
+				span
+
+		else if page == 'purchases' || page == 'cart'
 			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}, {title: 'Корзина', icon: 'cart', addedClass: '--cart-full'}, {title: 'Мои покупки', icon: 'list'}];
+		
+			.header__menu.menu-header
+				nav.menu-header__body
+					ul.header-menu
+						each item, i in menu
+							li.header-menu__item
+								a(href="#" class=i==index ? "header-menu__link header__item active" : "header-menu__link header__item")
+									if item.title == 'Корзина'
+										.header-menu__icon.header-menu__icon--cart-full
+											img(src="img/icons-svg/cart.svg")
+										span.header-menu__span= item.title
+									else
+										+icon(item.icon)
+										span.header-menu__span= item.title
+
+			.header__actions
+				.header__wallet.header__item
+					+icon('wallet')
+					span 24452
+				a(href="#").header__user.header__item
+					+icon('exit')
+					span Выйти
+			button.toggle-mnu
+				span
+
+		else if page == 'history'
+			- let menu = [{title: 'Товары', icon: 'prods'}, {title: 'Мероприятия', icon: 'events'}, {title: 'Моя истoрия', icon: 'history'}, {title: 'Управление', icon: 'handler'}, {title: 'Корзина', icon: 'cart'}];
 		
 			.header__menu.menu-header
 				nav.menu-header__body

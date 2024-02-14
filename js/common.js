@@ -158,9 +158,11 @@
 		// показ/скрытие инфомодалок
 		document.getElementById('infomodal-success-toggle').onclick = function() {
 			MicroModal.show('modal-inform-succes');
+			// MicroModal.close('modal-inform-error');
 		}
 		document.getElementById('infomodal-error-toggle').onclick = function() {
 			MicroModal.show('modal-inform-error');
+			// MicroModal.close('modal-inform-succes');
 		}
 
 		//END показ/скрытие инфомодалок

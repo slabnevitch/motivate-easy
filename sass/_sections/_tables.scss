@@ -292,7 +292,7 @@
 	@include but-null();
 	display: flex;
 	align-items: center;
-	column-gap: rem(13);
+	column-gap: rem(6);
 	font-family: 'Rubik', sans-serif;
 	transition: opacity .2s;
 
@@ -314,6 +314,7 @@
 		}
 }
 .purchase-status{
+	@include but-null();
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -327,20 +328,84 @@
 	}
 
 }
+button.purchase-status{
+		@media (any-hover: hover) { //только для устройств с ховером
+				cursor: pointer;
+				
+			}
+
+}
 .purchase-status--complect{
 	background-color: #EDE7FB;
+}
+button.purchase-status--complect{
+	@media (any-hover: hover) { //только для устройств с ховером
+			
+
+				&:hover{
+					background-color: darken(#EDE7FB, 5%);
+				}
+
+
+				&:active{
+					background-color: lighten(#EDE7FB, 5%);
+				}
+			}
 }
 .purchase-status--received{
 	background-color: #D4F8D3;
 }
+button.purchase-status--received{
+			@media (any-hover: hover) { //только для устройств с ховером
+			
+
+				&:hover{
+					background-color: darken(#D4F8D3, 5%);
+				}
+
+
+				&:active{
+					background-color: lighten(#D4F8D3, 5%);
+				}
+			}
+
+}
 .purchase-status--ready{
 	background-color: #FFF0BB;
+}
+button.purchase-status--ready{
+	@media (any-hover: hover) { //только для устройств с ховером
+			
+
+				&:hover{
+					background-color: darken(#FFF0BB, 5%);
+				}
+
+
+				&:active{
+					background-color: lighten(#FFF0BB, 5%);
+				}
+			}
 }
 .purchase-status--abort{
 	background-color: #FBE7E9;
 }
+button.purchase-status--abort{
+	@media (any-hover: hover) { //только для устройств с ховером
+
+				&:hover{
+					background-color: darken(#FBE7E9, 5%);
+				}
+
+
+				&:active{
+					background-color: lighten(#FBE7E9, 5%);
+				}
+			}
+}
 
 .cart__table {
+	
 	.header-table__column,
 	.body-table__column {
 		text-align: center;
@@ -392,6 +457,30 @@
 
 }
 .admin-product-request__table {
+
+	.body-table__row{
+		min-height: rem(80);
+		padding-top: rem(8);
+		padding-bottom: rem(8);
+
+		@include min-screen($md){
+			align-items: center;
+		}
+		@include max-screen($md){
+			flex-direction: column;
+			
+		}
+	}
+
+	.body-table__label{
+		@include min-screen($sm){
+			display: block;
+		}
+		@include min-screen($md){
+			display: none;
+		}
+	}
+
 	.header-table__column,
 	.body-table__column {
 		text-align: center;
@@ -445,7 +534,7 @@
 			
 		}
 
-		@include max-screen($sm){
+		@include max-screen($md){
 			text-align: left;
 
 			&:not(:last-child){

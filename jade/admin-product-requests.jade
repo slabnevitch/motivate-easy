@@ -32,7 +32,7 @@ block content
 									.body-table__label= headerCols[3]
 									if col[0].length
 										each text in col[0]
-											div(class=text == 'Выдана' ? "purchase-status purchase-status--received" : text == 'Можно забирать' ? "purchase-status purchase-status--complect" : text == 'Отмена' ? "purchase-status purchase-status--abort" : "")= text
+											button(type="button" class=text == 'Выдана' ? "purchase-status purchase-status--received" : text == 'Можно забирать' ? "purchase-status purchase-status--complect" : text == 'Отмена' ? "purchase-status purchase-status--abort" : "")= text
 								.body-table__column 
 									.body-table__label= headerCols[4]
 									.body-table__val= col[1]

@@ -92,7 +92,19 @@
 			document.documentElement.classList.toggle('lock');
 		}
 		//END открытие/закрытие моб. меню
+
+		// +/- в карточке товара
+		if(document.querySelector('.product-card__btn') !== null){
+			Array.prototype.slice.call(document.querySelectorAll('.product-card__btn'))
+				.forEach(function(btn) {
+					btn.onclick = function(e){
+						console.log('click')
+						e.target.textContent = e.target.textContent === '+'?'-':'+';
+					}
+				});
+		}
 		
+		//END +/- в карточке товара
 		//serch-results toggle 
 		if(document.querySelector('.admin-search__form') !== null){
 			var serchInput = document.getElementById('search-input');

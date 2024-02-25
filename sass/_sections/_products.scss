@@ -73,5 +73,14 @@
 	
 			}
 		}
+	span{
+		height: 100%;
+			line-height: rem(38);
+
+		&.minus{
+			line-height: rem(34);
+
+		}
+	}
 }
 /*--------------------END products----------------------*/ 

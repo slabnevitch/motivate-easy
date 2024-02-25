@@ -99,7 +99,8 @@
 				.forEach(function(btn) {
 					btn.onclick = function(e){
 						console.log('click')
-						e.target.textContent = e.target.textContent === '+'?'-':'+';
+						this.querySelector('span').innerHTML  = e.target.textContent === '+'? '&ndash;' :'+';
+						this.querySelector('span').classList.toggle('minus');
 					}
 				});
 		}

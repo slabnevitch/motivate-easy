@@ -2124,6 +2124,13 @@ textarea {
     cursor: pointer;
   }
 }
+.product-card__btn span {
+  height: 100%;
+  line-height: 2.375rem;
+}
+.product-card__btn span.minus {
+  line-height: 2.125rem;
+}
 
 /*--------------------END products----------------------*/
 /*--------------------tables----------------------*/

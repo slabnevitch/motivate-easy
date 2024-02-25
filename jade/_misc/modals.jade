@@ -93,10 +93,10 @@ mixin product-create()
 										input(type="file" name="" class="form__file" placeholder="Загрузить фото")
 
 
-					.modal__bottom
-						button(type="button").btn.modal__action Добавить
-						.modal__message.modal__message--success Товар успешно добавлен
-						//- button(type="button").btn.btn-gray.modal__action Отмена
+						.modal__bottom
+							button(type="submit").btn.modal__action Добавить
+							.modal__message.modal__message--success Товар успешно добавлен
+							//- button(type="button").btn.btn-gray.modal__action Отмена
 mixin product-edit()
 	#product-edit.modal.micromodal-slide(aria-hidden='true')
 		.modal__overlay(tabindex='-1' data-micromodal-close)
@@ -136,10 +136,10 @@ mixin product-edit()
 										input(type="file" name="" class="form__file" placeholder="Загрузить фото")
 
 
-					.modal__bottom
-						button(type="button").btn.modal__action Редактировать
-						.modal__message.modal__message--success Товар успешно добавлен
-						//- button(type="button").btn.btn-gray.modal__action Отмена
+						.modal__bottom
+							button(type="submit").btn.modal__action Редактировать
+							.modal__message.modal__message--success Товар успешно добавлен
+							//- button(type="button").btn.btn-gray.modal__action Отмена
 
 mixin modal-inform-success()
 	#modal-inform-succes.inform-modal.inform-modal--success.modal.micromodal-slide(aria-hidden='true')

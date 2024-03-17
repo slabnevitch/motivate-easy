@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Товары
+    <title>Корзина
     </title>
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
@@ -18,7 +18,7 @@
           <div class="header__menu menu-header">
             <nav class="menu-header__body">
               <ul class="header-menu">
-                <li class="header-menu__item"><a href="#" class="header-menu__link header__item active">
+                <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
                         <svg class="icon icon-prods ">
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#prods"></use>
                         </svg><span class="header-menu__span">Товары</span></a></li>
@@ -31,6 +31,10 @@
                           <use xlink:href="img/icons-svg/symbol/sprite.svg#history"></use>
                         </svg><span class="header-menu__span">Моя истoрия</span></a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
+                        <svg class="icon icon-handler ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#handler"></use>
+                        </svg><span class="header-menu__span">Управление</span></a></li>
+                <li class="header-menu__item"><a href="#" class="header-menu__link header__item active">
                     <div class="header-menu__icon header-menu__icon--cart-full"><img src="img/icons-svg/cart.svg"></div><span class="header-menu__span">Корзина</span></a></li>
                 <li class="header-menu__item"><a href="#" class="header-menu__link header__item">
                         <svg class="icon icon-list ">
@@ -52,76 +56,14 @@
           <button class="toggle-mnu"><span></span></button>
         </div>
       </header>
-      <div class="main-content">
-        <section class="products">
-          <div class="products__wrapper">
-            <div class="product-card">
-              <div class="product-card__img _fit"><img src="img/snikers/1.jpg" alt="product" class="_fit-img"></div>
-              <div class="product-card__body">
-                <div class="product-card__title">Snickers Off-White 2024</div>
-                <div class="product-card__price">3800</div>
-                <button type="button" class="product-card__btn"><span>+</span></button>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__img _fit"><img src="img/snikers/2.jpg" alt="product" class="_fit-img"></div>
-              <div class="product-card__body">
-                <div class="product-card__title">Snickers Off-White 2024</div>
-                <div class="product-card__price">3400</div>
-                <button type="button" class="product-card__btn"><span>+</span></button>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__img _fit"><img src="img/snikers/3.jpg" alt="product" class="_fit-img"></div>
-              <div class="product-card__body">
-                <div class="product-card__title">Snickers Off-White 2024</div>
-                <div class="product-card__price">4340</div>
-                <button type="button" class="product-card__btn"><span>+</span></button>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__img _fit"><img src="img/snikers/1.jpg" alt="product" class="_fit-img"></div>
-              <div class="product-card__body">
-                <div class="product-card__title">Snickers Off-White 2024</div>
-                <div class="product-card__price">3800</div>
-                <button type="button" class="product-card__btn"><span>+</span></button>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__img _fit"><img src="img/snikers/2.jpg" alt="product" class="_fit-img"></div>
-              <div class="product-card__body">
-                <div class="product-card__title">Snickers Off-White 2024</div>
-                <div class="product-card__price">3400</div>
-                <button type="button" class="product-card__btn"><span>+</span></button>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__img _fit"><img src="img/snikers/3.jpg" alt="product" class="_fit-img"></div>
-              <div class="product-card__body">
-                <div class="product-card__title">Snickers Off-White 2024</div>
-                <div class="product-card__price">4340</div>
-                <button type="button" class="product-card__btn"><span>+</span></button>
-              </div>
-            </div>
+      <div class="main-content main-content--error">
+        <div class="error-page">
+          <div class="__wrapper">
+            <div class="error-page__img"><img src="img/error-pages/products-none.svg" alt="alt"></div>
+            <div class="error-page__title">Товары отсутвуют</div>
+            <p class="error-page__text">Скоро появятся новые товары</p>
           </div>
-          <div class="pagination__wrapper">
-                <div class="pagination"><a href="#" class="pagination__arrow pagination__arrow--prev">Prev
-                        <svg class="icon icon-chev-left ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-left"></use>
-                        </svg></a>
-                  <ul class="pagination__list">
-                    <li class="pagination__item"><a href="#" class="pagination__link">1</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link active">2</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
-                    <li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
-                  </ul><a href="#" class="pagination__arrow pagination__arrow--next">Next
-                        <svg class="icon icon-chev-right ">
-                          <use xlink:href="img/icons-svg/symbol/sprite.svg#chev-right"></use>
-                        </svg></a>
-                </div>
-          </div>
-        </section>
+        </div>
       </div>
     </main>
         <div id="modal-inform-succes" aria-hidden="true" class="inform-modal inform-modal--success modal micromodal-slide">
@@ -172,6 +114,8 @@
     <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     
     
+    <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
+    <script src="js/libs/counter/counter.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

@@ -1,11 +1,8 @@
 @charset "UTF-8";
-
 /*--micromodal--*/
-
 /**************************\
   Basic Modal Styles
 \**************************/
-
 .modal {
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 }
@@ -99,8 +96,7 @@
   transition: transform 0.25s ease-out;
 }
 
-.modal__btn:focus,
-.modal__btn:hover {
+.modal__btn:focus, .modal__btn:hover {
   -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
@@ -113,47 +109,38 @@
 /**************************\
   Demo Animation Style
 \**************************/
-
 @keyframes mmfadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
 }
-
 @keyframes mmfadeOut {
   from {
     opacity: 1;
   }
-
   to {
     opacity: 0;
   }
 }
-
 @keyframes mmslideIn {
   from {
     transform: translateY(15%);
   }
-
   to {
     transform: translateY(0);
   }
 }
-
 @keyframes mmslideOut {
   from {
     transform: translateY(0);
   }
-
   to {
     transform: translateY(-10%);
   }
 }
-
 .micromodal-slide {
   display: none;
 }
@@ -217,13 +204,9 @@
 }
 
 /*--end micromodal--*/
-
 /*--tiny-slider--*/
-
 /*--end tiny-slider--*/
-
 /*--fstdropdown--*/
-
 .fstdiv {
   position: relative;
   min-height: 34px;
@@ -346,8 +329,7 @@
   display: block;
 }
 
-.fstdropdown .hideFst,
-.fstdropdown-select.fstcreated {
+.fstdropdown .hideFst, .fstdropdown-select.fstcreated {
   display: none;
 }
 
@@ -404,15 +386,9 @@
 }
 
 /*--end fstdropdown--*/
-
 /*--tiny-slider--*/
-
 /*--end tiny-slider--*/
-
 /*--FormHandler-*/
-
 /*--end FormHandler--*/
-
 /*--spoilers-*/
-
 /*# sourceMappingURL=maps/libs.css.map */

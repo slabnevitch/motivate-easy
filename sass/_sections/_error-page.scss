@@ -1,0 +1,23 @@
+.error-page{
+	text-align: center;
+	font-family: 'Inter', sans-serif;
+}
+.error-page__img{
+	max-width: rem(470);
+	margin: 0 auto 0 auto;
+	@include adaptive-value-rem('margin-bottom', 85, 30, $maxWidth, $minWidth, 1);
+
+	img{
+		max-width: 100%;
+	}
+}
+.error-page__title{
+	margin-bottom: rem(20);
+	font-weight: 500;
+	font-size: rem(40);
+	color: #111111;
+}
+.error-page__text{
+	color: #838282;
+	font-size: rem(24);
+}

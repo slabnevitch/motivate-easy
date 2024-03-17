@@ -82,6 +82,12 @@ html, body{
 	.main-content{
 		padding: rem(43) 0;
 		flex: 1 1 auto;
+
+		&--error{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 	.footer{
 		flex: 0 0 auto;

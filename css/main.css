@@ -610,6 +610,14 @@ html, body {
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
+.main .main-content--error {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 .main .footer {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
@@ -1583,6 +1591,37 @@ textarea {
 }
 
 /*===================== end cart page======================*/
+.error-page {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.error-page__img {
+  max-width: 29.375rem;
+  margin: 0 auto 0 auto;
+  margin-bottom: 5.3125rem;
+}
+@media (max-width: 67.5em) {
+  .error-page__img {
+    margin-bottom: clamp( 1.875rem , 0.7291666667rem  +  5.7291666667vw , 5.3125rem );
+  }
+}
+.error-page__img img {
+  max-width: 100%;
+}
+
+.error-page__title {
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: #111111;
+}
+
+.error-page__text {
+  color: #838282;
+  font-size: 1.5rem;
+}
+
 /*--------------------footer----------------------*/
 /*--------------------END footer----------------------*/
 /*--------------------header----------------------*/
